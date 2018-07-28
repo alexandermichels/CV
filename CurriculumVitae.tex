@@ -1,0 +1,166 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[empty]{fullpage}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{mypurple}{RGB}{153,0,153}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=mypurple,
+	filecolor=mypurple,      
+	urlcolor=mypurple,
+	citecolor=mypurple,
+	pdftitle={Curriculum Vitae},
+	bookmarks=true,
+	pdfpagemode=FullScreen,
+}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mypurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+	\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+	
+	
+	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{\large Alexander C. Michels}  & Mathematician and Computer Scientist\\
+		(716) 753 0414 &  \href{http://alexandermichels.github.io}{alexandermichels.github.io}  \\
+		alexandercm4297@gmail.com & \href{http://github.com/alexandermichels}{github.com/alexandermichels}\\
+	\end{tabular*}
+	\\
+	
+	\vspace{0.1in}
+	
+	\resheading{\textcolor{white}{Education}}
+	\begin{itemize}
+		\item
+		\ressubheading{Westminster College}{New Wilmington, PA}{Bachelor of Science in Mathematics and Financial Economics}{August 2015 - Present}
+		\begin{itemize}
+			\resitem{Minor in Computer Science}
+			\resitem{Honors Thesis: “An Exploration of the Topological and Logical Properties of Hierarchical Temporal Memory Networks”}
+			\resitem{All-College Honors Program, Endowment Fund, Kappa Mu Epsilon (Math Honors), Men’s Choir, Omicron Kappa Sigma, Pi Sigma Pi, and Secretary of Robotics Team}
+		\end{itemize}
+		
+	\end{itemize}
+	
+	\resheading{\textcolor{white}{Professional Experience}}
+	\begin{itemize}
+		\item
+		\ressubheading{Researcher}{Los Angeles, CA}{Institute for Pure and Applied Mathematics at UCLA / Praedicat, Inc.}{June 2018 - Present}
+		\begin{itemize}
+			\resitem{Selected to be a part of 2018’s Research in Industrial Projects for Students (RIPS) at UCLA.}
+			\resitem{As part of the program, I am working for Praedicat, Inc. automating information extraction and aggregation from unstructured web data for business profiling.}
+		\end{itemize}
+	\item
+		\ressubheading{Software Engineer and Computer Support Specialist}{New Wilmington, PA}{Titan Radio and WCN 24/7}{May 2018 - Present}
+		\begin{itemize}
+			\resitem{Responsible for the servers, virtual machines, computers, and streams required to keep the radio and television station operating.}
+			\resitem{Wrote various software solutions including one to update the Titan Radio weather conditions and weather forecast while no one was on the air and automatically Tweet Severe Weather Warnings.}
+		\end{itemize}
+		\item
+		\ressubheading{Financial Analyst}{Various}{Program with Moody’s Investors Service VP Ben Nelson}{December 2017 - Present}
+		\begin{itemize}
+			\resitem{My focus was in largely in data science and providing macroeconomic perspective. Companies we have focused on include PPG and Olin.}
+			\resitem{Our team ultimately comes up with a credit rating along with bond and stock recommendations which we present to a panel of experts.}
+		\end{itemize}
+	
+	\item
+		\ressubheading{Teaching Assistant and Tutor}{New Wilmington, PA}{Westminster College}{August 2015 - Present}
+		\begin{itemize}
+			\resitem{Westminster’s Division of Cognitive and Quantitative Sciences selected me during my first year to tutor students and serve as a teaching assistant in mathematics and computer science.}
+			\resitem{– I assisted professors in grading, working with students individually, and developing curriculum for classes covering coursework in Calculus, Computer Science, and Operations Research.}
+		\end{itemize}
+		
+		\item
+		\ressubheading{Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
+		\begin{itemize}
+			\resitem{I worked with Dr. Shaffer to integrate cryptocurrency trading into his algorithmic currency trading application.}
+			\resitem{We explored inefficiencies between exchanges and backtested technical strategies such as Donchian Channels and Bollinger Bands on Bitcoin, Ethereum, and Litecoin.}
+		\end{itemize}
+		
+		\pagebreak
+		
+	\end{itemize}
+	
+	\resheading{\textcolor{white}{Research}}
+	
+		\vspace{0.1in}
+
+		\textbf{Information Extraction and Aggregation from Unstructured Web Data for Business Profiling}
+		\begin{itemize}
+			\resitem{Worked closely with the Data Science and Quantitative Development teams at Praedicat, Inc. to understand their data needs for the actuarial models.}
+			\resitem{We used Natural Language Processing and other Information Extraction techniques to handle unstructured data which we converted to subject-predicate-object triples and then used logic-based classification by comparison a knowledge graph.}
+	\end{itemize}
+
+		\textbf{An Exploration of the Topological and Logical Properties of Hierarchical Temporal Memory Networks}
+		\begin{itemize}
+			\resitem{This is ongoing research as part of my Honors Research requirement at Westminster College and is supervised by a board of advisors.}
+			\resitem{I am hoping to improve on Semantic Folding Theory and the encoding and decoding mechanisms of Hierarchical Temporal Memory and will also focus on attempting to use fuzzy logic and soft computing to improve the performance or forecasting ability of HTMs.}
+		\end{itemize}
+
+		\textbf{Minimum Square Deviance k-Chinese Postman Problems}
+		\begin{itemize}
+			\resitem{I worked on a variation of the k-Chinese Postman Problem called the Minimum Square Deviance k-Chinese Postman Problem with Dr. Natacha Merz, specifically trying to find solutions for lattice graphs like the square grid graph.}
+			\resitem{Although we believe we made some headway, we were unable to prove any of our results because of the intractability of the problem.}
+		\end{itemize}
+	
+		\textbf{Optimizing Throughput, Cost, and Safety in Toll Booth Plazas}
+		\begin{itemize}
+			\resitem{Lead a team of mathematicians over a single weekend in COMAP's International Mathematical Modeling Competition to produce a 20-page research paper.}
+			\resitem{Received Honorable Mention for our solution, placing us in the top 13 in the United States and presented our results at 2017 Pi Mu Epsilon Regional Conference}
+		\end{itemize}
+	
+	\resheading{\textcolor{white}{Projects}}
+	
+			\vspace{0.1in}
+	
+	\textbf{Trinity Firefighting Contest}
+	\begin{itemize}
+		\resitem{Built and programmed an autonomous robot to tackle various challenges at the Trinity Firefighting Contest including putting out candles, navigating a maze, and rescuing a baby doll.}
+		\resitem{My team won the Best Robot in Division Prize for the Senior, Unique Division and the North America Award for Level 2.}
+	\end{itemize}
+
+	\textbf{TrackChain}
+	\begin{itemize}
+		\resitem{Explored the technical details of blockchain technology including Elliptic Curve Cryptography, Network Flow Analysis, and Data Structure alternatives to a Merkle Chain}
+		\resitem{Presented my research and decentralized application at Westminster’s Undergraduate Research and Arts Festival}
+	\end{itemize}
+	
+	\resheading{\textcolor{white}{Skills}}
+	
+	\begin{description}
+		\item[Languages:] Bash, C++, Clojure, CSS, HTML, Java, Javascript, Python, R, Solidity, XML
+		\item[Computer Science:] Basic Web Development, Information Extraction, Machine Learning, Robotics
+		\item[Finance and Economics:] Corporate Credit Analysis, Econometrics, Risk Analysis
+	\end{description}
+	
+\end{document}
