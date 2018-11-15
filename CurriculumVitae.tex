@@ -12,12 +12,14 @@
 \usepackage[empty]{fullpage}
 \usepackage{hyperref, enumitem}
 \usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{electricpurple}{rgb}{0.8, 0.2, 1.0}
+
 \hypersetup{
 	colorlinks=true,
-	linkcolor=violet,
-	filecolor=violet,      
-	urlcolor=violet,
-	citecolor=violet,
+	linkcolor=electricpurple,
+	filecolor=electricpurple,      
+	urlcolor=electricpurple,
+	citecolor=electricpurple,
 	pdftitle={Curriculum Vitae},
 	bookmarks=true,
 }
@@ -37,7 +39,7 @@
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{violet}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resheading}[1]{{\large \colorbox{electricpurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
 	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
@@ -51,8 +53,8 @@
 	
 	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{\large Alexander C. Michels}  & Mathematician and Computer Scientist\\
-		(716) 753 0414 &  \href{http://alexandermichels.github.io}{alexandermichels.github.io}  \\
-		\href{mailto:alexandercm4297@gmail.com}{alexandercm4297@gmail.com} & \href{http://github.com/alexandermichels}{github.com/alexandermichels}\\
+		(716) 753 0414 &  \href{http://alexandermichels.github.io}{\textbf{alexandermichels.github.io}}  \\
+		\href{mailto:alexandercm4297@gmail.com}{\textbf{alexandercm4297@gmail.com}} & \href{http://github.com/alexandermichels}{\textbf{github.com/alexandermichels}}\\
 	\end{tabular*}
 	\\
 	
