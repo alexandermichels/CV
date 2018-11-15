@@ -1,5 +1,8 @@
-CurriculumVitae.aux
-CurriculumVitae.log
-CurriculumVitae.out
-CurriculumVitae.synctex.gz
-CoverLetter/*
+# Ignore intermediary TeX files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+CoverLetters/*
