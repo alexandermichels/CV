@@ -11,8 +11,10 @@
 %-----------------------------------------------------------
 \usepackage[empty]{fullpage}
 \usepackage{hyperref, enumitem}
+  \setlist[itemize]{leftmargin=*}
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{electricpurple}{rgb}{0.8, 0.2, 1.0}
+\RequirePackage{fontawesome5}
 
 \hypersetup{
 	colorlinks=true,
@@ -20,8 +22,6 @@
 	filecolor=electricpurple,      
 	urlcolor=electricpurple,
 	citecolor=electricpurple,
-	pdftitle={Curriculum Vitae},
-	bookmarks=true,
 }
 \raggedbottom
 \raggedright
@@ -38,120 +38,141 @@
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{electricpurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\resitem}[1]{\item[--] #1}
+
+\newcommand{\resheading}[1]{{\vspace{2pt}\large \colorbox{electricpurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{8pt}}
+
 \newcommand{\ressubheading}[4]{
-	\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
-	\end{tabular*}\vspace{-6pt}}
+	\textbf{#1} \hfill #2 \\
+	\textit{#3} \hfill \textit{#4} \\
+	\vspace{-6pt}
+}
+
+\newcommand{\Position}[4]{
+	\vspace{-6pt}
+	\textbf{#1} \hfill \faMapPin \ #2 \\
+	\textit{#3} \hfill \textit{#4} \\
+	\vspace{-4pt}
+}
+
+\newcommand{\Talk}[4]{
+	\textbf{#1} \hfill #2 \\
+	\textit{#3} \hfill \faMapMarker \ #4 \\
+	\vspace{2pt}
+}
+
+\newcommand{\Research}[2]{
+	\textbf{#1}\\
+	\textit{#2} \\
+	\vspace{-3pt}
+}
+
+\newcommand{\Award}[4]{
+	\textbf{#1} \hfill #2 \\
+	\textit{``#3''} \hfill #4 \\
+
+}
+
+\newenvironment{titemize}{
+	\vspace{-6pt}
+	\begin{itemize}
+		\setlength{\itemsep}{0pt}
+		\setlength{\parskip}{0pt}
+		\setlength{\topsep}{0pt}
+}{\end{itemize}\vspace{-4pt}}
+
+
 %-----------------------------------------------------------
 
 
 \begin{document}
 	
 	
-	\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{\large Alexander C. Michels}  & Mathematician and Computer Scientist\\
-		(716) 753 0414 &  \href{http://alexandermichels.github.io}{\textbf{alexandermichels.github.io}}  \\
-		\href{mailto:alexandercm4297@gmail.com}{\textbf{alexandercm4297@gmail.com}} & \href{http://github.com/alexandermichels}{\textbf{github.com/alexandermichels}}\\
-	\end{tabular*}
-	\\
+
+		\textbf{\LARGE Alexander C. Michels} \\
+	 \href{mailto:alexandercm4297@gmail.com}{\textbf{\faEnvelope \ alexandercm4297@gmail.com}}\hfill\href{tel:17167530414}{\faPhone \ \textbf{(716) 753 0414}} \hfill \href{https://www.linkedin.com/in/alexmichels/}{\faLinkedin \ \textbf{linkedin.com/in/alexmichels}} \\
+	\href{http://alexandermichels.github.io}{\faGlobeAmericas \ \textbf{alexandermichels.github.io}} \hfill \href{https://github.com/alexandermichels}{\faGithub \ \textbf{github.com/alexandermichels}} \\
 	
-	\vspace{0.1in}
-	
-	\resheading{\textcolor{white}{Education}}
-	\begin{itemize}
-		\item
-		\ressubheading{Westminster College}{New Wilmington, PA}{Bachelor of Science in Mathematics and Financial Economics}{August 2015 - May 2019}
-		\begin{itemize}
+	\resheading{\textcolor{white}{\ \faGraduationCap \ Education}}
+
+		\Position{Westminster College}{New Wilmington, PA}{Bachelor of Science in Mathematics and Financial Economics}{August 2015 - May 2019}
+		\begin{titemize}
 			\resitem{3.7 GPA; Minor in Computer Science}
 			\resitem{Honors Thesis in Hierarchical Temporal Memory focused on A.I. and Time Series Analysis}
 			\resitem{\textbf{Extra-Curriculars: }Endowment Fund, Honors Program, Financial Analyst Program, Kappa Mu Epsilon, Men’s Choir, Omicron Kappa Sigma, Pi Sigma Pi, and Secretary of Robotics Team}
-		\end{itemize}
-		
-	\end{itemize}
+		\end{titemize}
 	
-	\resheading{\textcolor{white}{Professional Experience}}
-	\begin{itemize}[topsep=3pt, itemsep=1pt]
-		\item
-		\ressubheading{Informatics Researcher}{Los Angeles, CA}{Institute for Pure and Applied Mathematics at UCLA / Praedicat, Inc.}{June 2018 -August 2018}
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
+	\resheading{\textcolor{white}{\ \faBriefcase  \ Professional Experience}}
+
+		\Position{Informatics Researcher}{Los Angeles, CA}{Institute for Pure and Applied Mathematics at UCLA / Praedicat, Inc.}{June 2018 -August 2018}
+		\begin{titemize}
 			\resitem{Worked for Praedicat, Inc. automating information extraction, classification, and aggregation from unstructured web data for business profiling of over 52,600 companies and corporate entities.}
-		\end{itemize}
-		\item
-		\ressubheading{Systems Administrator and Software Engineer}{New Wilmington, PA}{\href{http://titanradio.net/}{Titan Radio} and \href{https://www.wcn247.com/}{WCN 24/7}}{May 2018 - Present}
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
+		\end{titemize}
+
+		\Position{Systems Administrator and Software Engineer}{New Wilmington, PA}{\href{http://titanradio.net/}{Titan Radio} and \href{https://www.wcn247.com/}{WCN 24/7}}{May 2018 - Present}
+		\begin{titemize}
 			\resitem{Overhauled network, oversaw purchasing, and wrote \href{https://github.com/alexandermichels/WeatherWaves}{software solutions}.}
-		\end{itemize}
-		\item
-		\ressubheading{Financial Analyst}{Various}{Program with Moody’s Investors Service VP Ben Nelson}{December 2017 - Present}
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
+		\end{titemize}
+
+		\Position{Financial Analyst}{Various}{Program with Moody’s Investors Service VP Ben Nelson}{December 2017 - Present}
+		\begin{titemize}
 			\resitem{Presented a credit rating along with bond and stock recommendations to a panel of experts.}
-		\end{itemize}
-		\item
-		\ressubheading{Computational Finance Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
+		\end{titemize}
+
+		\Position{Computational Finance Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
+		\begin{titemize}
 			\resitem{Explored inefficiencies between cryptocurrency exchanges and backtested technical strategies such as Donchian Channels and Bollinger Bands on Bitcoin, Ethereum, and Litecoin.}
-		\end{itemize}
-		
-	\end{itemize}
-	\resheading{\textcolor{white}{Research}}
+		\end{titemize}
+
+	\resheading{\textcolor{white}{\ \faBook \ Research}}
 	
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
-			\item \textbf{Using ARIMA Models to Capture the Predictive Power of Cortical Learning Algorithms} \\ \textit{December 2017 - Present}
-			\begin{itemize}[topsep=1pt, itemsep=1pt]
-				\resitem{\href{https://github.com/alexandermichels/HonorsResearch}{Ongoing research} in computational neuroscience, specifically HTMs modeled after the neocortex.}
-			\end{itemize}
-			
-			\item \textbf{Computational Fact-Checking through Relational Similarity based Path Mining} \\	\textit{July 2018 - Present}
-			\begin{itemize}[topsep=1pt, itemsep=1pt]
-				\resitem{Presented our work at IPAM, will be presenting at \href{https://jointmathematicsmeetings.org/meetings/national/jmm2019/2217_progfull.html?fbclid=IwAR0AccnUi\_yuX4UdnTVF-cCFVJ5lNYAdIvzw7TPS81eGXk1pn5PvQjaGyTo\#2217:AMSCP33}{2019 Joint Mathematics Meeting}, and \href{https://github.com/himahuja/StreamMiner}{continually optimizing} in the hopes of publishing}
-			\end{itemize}
-		\end{itemize}
+	\Research{Using ARMA Models to Capture the Predictive Power of Cortical Learning Algorithms}{December 2017 - Present}
+	\begin{titemize}
+		\resitem{\href{https://github.com/alexandermichels/HonorsResearch}{Ongoing research} in computational neuroscience, specifically HTMs modeled after the neocortex.}
+	\end{titemize}
 	
-		\resheading{\textcolor{white}{Conferences and Talks}}
+	\Research{Computational Fact-Checking through Relational Similarity based Path Mining}{July 2018 - Present}
+	\begin{titemize}
+		\resitem{Presented our work at IPAM, presented at \href{https://jointmathematicsmeetings.org/meetings/national/jmm2019/2217_progfull.html?fbclid=IwAR0AccnUi\_yuX4UdnTVF-cCFVJ5lNYAdIvzw7TPS81eGXk1pn5PvQjaGyTo\#2217:AMSCP33}{2019 Joint Mathematics Meeting}, and \href{https://github.com/himahuja/StreamMiner}{continually optimizing.}}
+	\end{titemize}
+	
+		\resheading{\textcolor{white}{\ \faChalkboardTeacher \ Conferences and Talks}}
 		
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
-			\item
-			\ressubheading{``Using ARIMA Models to Capture the Predictive Power of CLAs"}{April 2019}{National Conference on Undergraduate Research}{Atlanta, GA}
-			\item
-			\ressubheading{``Computational Fact-Checking through Knowledge Graphs"}{January 2019}{AMS Contributed Paper Session at 2019 Joint Mathematics Meeting}{Baltimore, MD}
-			\item
-			\ressubheading{``Information Extraction and Aggregation for Business Profiling"}{July 2018}{Invited Talk at Institute for Pure and Applied Mathematics}{Los Angeles, CA}
-			\item
-			\ressubheading{``Repeated Play Games"}{April 2017}{MAA, Allegheny Mountain Section Meeting}{Pittsburgh, PA}
-			\item
-			\ressubheading{``Optimizing Throughput, Cost, and Safety in Toll Booth Plazas"}{February 2017}{Pi Mu Epsilon Regional Conference}{Youngstown, OH}
-			
-		\end{itemize}
+		\Talk{``Capturing the Predictive Power of Cortical Learning Algorithms"}{April 2019}{National Conference on Undergraduate Research}{Atlanta, GA}
+		
+		\Talk{``Computational Fact-Checking through Knowledge Graphs"}{January 2019}{AMS Contributed Paper Session at 2019 Joint Mathematics Meeting}{Baltimore, MD}
+		
+		\Talk{``Information Extraction and Aggregation for Business Profiling"}{July 2018}{Invited Talk at Institute for Pure and Applied Mathematics}{Los Angeles, CA}
+		
+		\Talk{``Repeated Play Games"}{April 2017}{MAA, Allegheny Mountain Section Meeting}{Pittsburgh, PA}
+		
+		\Talk{``Optimizing Throughput, Cost, and Safety in Toll Booth Plazas"}{February 2017}{Pi Mu Epsilon Regional Conference}{Youngstown, OH}
+
 	\pagebreak
 	
-		\resheading{\textcolor{white}{Awards}}
+		\resheading{\textcolor{white}{\ \faAward \ Awards}}
 
-		\begin{itemize}[topsep=3pt, itemsep=1pt]
-			\item
-			\ressubheading{Best Robot in Division Prize for Senior Unique Division}{April 2018}{``Robot in the Division with the lowest Total Final Scores"}{Trinity Fire Fighting Robot Contest}
-			\item
-			\ressubheading{North America Award for Level 2}{April 2018}{``The top North American robot in Level 2"}{Trinity Fire Fighting Robot Contest}
-			\item
-			\ressubheading{Dr. Thomas R. Nealeigh Mathematics Scholarship}{March 2018}{``awarded to an outstanding junior or senior mathematics major"}{Westminster College}
-			\item
-			\ressubheading{Paul E. Brown Memorial Scholarship}{March 2017}{``given based on merit and academic achievement"}{Westminster College}
-			\item
-			\ressubheading{Honorable Mention}{January 2017}{``excellent modeling and sensitivity analysis''}{COMAP International Mathematical Modeling Competition}
-			\item
-			\ressubheading{Mathematics Book Award}{March 2017}{``presented to the sophomore Mathematics major with the highest GPA"}{Westminster College}
-		\end{itemize}
+
+			\Award{Best Robot in Division Prize for Senior Unique Division}{April 2018}{Robot in the Division with the lowest Total Final Scores}{Trinity Fire Fighting Robot Contest}
+
+			\Award{North America Award for Level 2}{April 2018}{The top North American robot in Level 2}{Trinity Fire Fighting Robot Contest}
+
+			\Award{Dr. Thomas R. Nealeigh Mathematics Scholarship}{March 2018}{awarded to an outstanding junior or senior mathematics major}{Westminster College}
+
+			\Award{Paul E. Brown Memorial Scholarship}{March 2017}{given based on merit and academic achievement}{Westminster College}
+
+			\Award{Honorable Mention}{January 2017}{excellent modeling and sensitivity analysis}{COMAP International Mathematical Modeling Competition}
+
+			\Award{Mathematics Book Award}{March 2017}{presented to the sophomore Mathematics major with the highest GPA}{Westminster College}
 	
-	\resheading{\textcolor{white}{Skills}}
-	
+	\resheading{\textcolor{white}{\ \faCheckSquare \ Skills}}
+	\vspace{-16pt}
 	\begin{description}[itemsep=1pt]
-		\item[Computer Science:]  Parallel Programming, Robotics, Software Engineering, System Administration, Virtualization, Web Development
-		\item[Data Science:] A.I., Big Data, Cognitive Computing, Information Extraction, Machine Learning
-		\item[Finance and Economics:] Algorithmic Trading, Corporate Credit Analysis, GAAP, Risk Analysis
-		\item[Languages:] Python (and Cython), Java, C++, Bash, R, HTML, CSS, XML, Javascript, SQL, Visual Basic
-		\item[Software \& Tools:] AWS, Google Cloud, NLTK, Numpy, Pandas, scikit-learn, Selenium
+		\item[\faServer \ Computer Science:]  Parallel Programming,  Software Engineering, System Administration
+		\item[\faChartLine \ Data Science:] A.I., Big Data, Informatics, Machine Learning, Network Science
+		\item[\faDollarSign \ Finance and Economics:] Algorithmic Trading, Corporate Credit Analysis, GAAP, Risk Analysis
+		\item[\faCode \ Languages:] Python (\& Cython), Java, C++, Bash, R, HTML, CSS, XML, Javascript, SQL, Visual Basic
+		\item[\faFileCode \ Software \& Tools:] AWS, Google Cloud, NLTK, Numpy, Pandas, scikit-learn, Selenium
 	\end{description}
 	
 \end{document}
