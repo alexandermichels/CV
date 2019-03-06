@@ -40,7 +40,7 @@
 %Custom commands
 \newcommand{\resitem}[1]{\item[--] #1}
 
-\newcommand{\resheading}[1]{{\vspace{2pt}\large \colorbox{electricpurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{8pt}}
+\newcommand{\resheading}[1]{{\vspace{2pt}\large \colorbox{electricpurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{3pt}}
 
 \newcommand{\ressubheading}[4]{
 	\textbf{#1} \hfill #2 \\
@@ -49,37 +49,33 @@
 }
 
 \newcommand{\Position}[4]{
-	\vspace{-6pt}
 	\textbf{#1} \hfill \faMapPin \ #2 \\
 	\textit{#3} \hfill \textit{#4} \\
-	\vspace{-4pt}
+	\vspace{1pt}
 }
 
 \newcommand{\Talk}[4]{
 	\textbf{#1} \hfill #2 \\
 	\textit{#3} \hfill \faMapMarker \ #4 \\
-	\vspace{2pt}
 }
 
-\newcommand{\Research}[2]{
+\newcommand{\Research}[3]{
 	\textbf{#1}\\
-	\textit{#2} \\
-	\vspace{-3pt}
+	\textit{#2} \hfill \textit{#3} \\
 }
 
 \newcommand{\Award}[4]{
 	\textbf{#1} \hfill #2 \\
 	\textit{``#3''} \hfill #4 \\
-
 }
 
 \newenvironment{titemize}{
-	\vspace{-6pt}
+	\vspace{-12pt}
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0pt}
 		\setlength{\topsep}{0pt}
-}{\end{itemize}\vspace{-4pt}}
+}{\end{itemize}\vspace{-12pt}}
 
 
 %-----------------------------------------------------------
@@ -102,39 +98,31 @@
 			\resitem{\textbf{Extra-Curriculars: }Endowment Fund, Honors Program, Financial Analyst Program, Kappa Mu Epsilon, Men’s Choir, Omicron Kappa Sigma, Pi Sigma Pi, and Secretary of Robotics Team}
 		\end{titemize}
 	
-	\resheading{\textcolor{white}{\ \faBriefcase  \ Professional Experience}}
-
+	\resheading{\textcolor{white}{\ \faBriefcase  \  Experience}}
+	
 		\Position{Informatics Researcher}{Los Angeles, CA}{Institute for Pure and Applied Mathematics at UCLA / Praedicat, Inc.}{June 2018 -August 2018}
-		\begin{titemize}
-			\resitem{Worked for Praedicat, Inc. automating information extraction, classification, and aggregation from unstructured web data for business profiling of over 52,600 companies and corporate entities.}
-		\end{titemize}
 
 		\Position{Systems Administrator and Software Engineer}{New Wilmington, PA}{\href{http://titanradio.net/}{Titan Radio} and \href{https://www.wcn247.com/}{WCN 24/7}}{May 2018 - Present}
-		\begin{titemize}
-			\resitem{Overhauled network, oversaw purchasing, and wrote \href{https://github.com/alexandermichels/WeatherWaves}{software solutions}.}
-		\end{titemize}
-
-		\Position{Financial Analyst}{Various}{Program with Moody’s Investors Service VP Ben Nelson}{December 2017 - Present}
-		\begin{titemize}
-			\resitem{Presented a credit rating along with bond and stock recommendations to a panel of experts.}
-		\end{titemize}
+		
+		\Position{Teaching Assistant and Tutor}{New Wilmington, PA}{Westminster College}{August 2015 - Present}
+		
+		\Position{Data Scientist}{New Castle, PA}{\href{http://treloaronline.com/}{Treloar \& Heisel}}{September 2018 - Present}
+		
+		\Position{Financial Analyst}{Various}{Program with Moody’s Investors Service VP Ben Nelson}{December 2017 - August 2018}
 
 		\Position{Computational Finance Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
-		\begin{titemize}
-			\resitem{Explored inefficiencies between cryptocurrency exchanges and backtested technical strategies such as Donchian Channels and Bollinger Bands on Bitcoin, Ethereum, and Litecoin.}
-		\end{titemize}
+
 
 	\resheading{\textcolor{white}{\ \faBook \ Research}}
 	
-	\Research{Using ARMA Models to Capture the Predictive Power of Cortical Learning Algorithms}{December 2017 - Present}
-	\begin{titemize}
-		\resitem{\href{https://github.com/alexandermichels/HonorsResearch}{Ongoing research} in computational neuroscience, specifically HTMs modeled after the neocortex.}
-	\end{titemize}
+	\Research{Using ARMA Models to Capture the Predictive Power of Cortical Learning Algorithms}{December 2017 - Present}{advised by Dr. C. David Shaffer and Dr. Carolyn Cuff}
+
+	\Research{Computational Fact-Checking through Relational Similarity based Path Mining}{July 2018 - Present}{with Himanshu Ahuja}
 	
-	\Research{Computational Fact-Checking through Relational Similarity based Path Mining}{July 2018 - Present}
-	\begin{titemize}
-		\resitem{Presented our work at IPAM, presented at \href{https://jointmathematicsmeetings.org/meetings/national/jmm2019/2217_progfull.html?fbclid=IwAR0AccnUi\_yuX4UdnTVF-cCFVJ5lNYAdIvzw7TPS81eGXk1pn5PvQjaGyTo\#2217:AMSCP33}{2019 Joint Mathematics Meeting}, and \href{https://github.com/himahuja/StreamMiner}{continually optimizing.}}
-	\end{titemize}
+	\Research{Minimum Square Deviance k-Chinese Postman Problems}{August 2017 - January 2018}{advised by Dr. Fontes Merz}
+	
+	\Research{Algorithmic Game Theory}{January 2017 - May 2017}{advised by Dr. Carolyn Cuff}
+
 	
 		\resheading{\textcolor{white}{\ \faChalkboardTeacher \ Conferences and Talks}}
 		
@@ -142,28 +130,33 @@
 		
 		\Talk{``Computational Fact-Checking through Knowledge Graphs"}{January 2019}{AMS Contributed Paper Session at 2019 Joint Mathematics Meeting}{Baltimore, MD}
 		
+		\Talk{``Information Extraction and Aggregation for Business Profiling"}{August 2018}{Invited Talk at Praedicat, Inc.}{Los Angeles, CA}
+		
 		\Talk{``Information Extraction and Aggregation for Business Profiling"}{July 2018}{Invited Talk at Institute for Pure and Applied Mathematics}{Los Angeles, CA}
 		
+		\Talk{``Decentralizing the World with Blockchain"}{April 2018}{Undergraduate Research \& Arts Celebration}{New Wilmington, PA}
+		
 		\Talk{``Repeated Play Games"}{April 2017}{MAA, Allegheny Mountain Section Meeting}{Pittsburgh, PA}
+		
+		\Talk{``Strategies in Simulated Repeated Play Game Theory"}{April 2017}{Undergraduate Research \& Arts Celebration}{New Wilmington, PA}
 		
 		\Talk{``Optimizing Throughput, Cost, and Safety in Toll Booth Plazas"}{February 2017}{Pi Mu Epsilon Regional Conference}{Youngstown, OH}
 
 	\pagebreak
-	
-		\resheading{\textcolor{white}{\ \faAward \ Awards}}
 
+	\resheading{\textcolor{white}{\ \faAward \ Awards}}
 
-			\Award{Best Robot in Division Prize for Senior Unique Division}{April 2018}{Robot in the Division with the lowest Total Final Scores}{Trinity Fire Fighting Robot Contest}
+		\Award{Best Robot in Division Prize for Senior Unique Division}{April 2018}{Robot in the Division with the lowest Total Final Scores}{Trinity Fire Fighting Robot Contest}
 
-			\Award{North America Award for Level 2}{April 2018}{The top North American robot in Level 2}{Trinity Fire Fighting Robot Contest}
+		\Award{North America Award for Level 2}{April 2018}{The top North American robot in Level 2}{Trinity Fire Fighting Robot Contest}
 
-			\Award{Dr. Thomas R. Nealeigh Mathematics Scholarship}{March 2018}{awarded to an outstanding junior or senior mathematics major}{Westminster College}
+		\Award{Dr. Thomas R. Nealeigh Mathematics Scholarship}{March 2018}{awarded to an outstanding junior or senior mathematics major}{Westminster College}
 
-			\Award{Paul E. Brown Memorial Scholarship}{March 2017}{given based on merit and academic achievement}{Westminster College}
+		\Award{Paul E. Brown Memorial Scholarship}{March 2017}{given based on merit and academic achievement}{Westminster College}
 
-			\Award{Honorable Mention}{January 2017}{excellent modeling and sensitivity analysis}{COMAP International Mathematical Modeling Competition}
+		\Award{Honorable Mention}{January 2017}{excellent modeling and sensitivity analysis}{COMAP International Mathematical Modeling Competition}
 
-			\Award{Mathematics Book Award}{March 2017}{presented to the sophomore Mathematics major with the highest GPA}{Westminster College}
+		\Award{Mathematics Book Award}{March 2017}{presented to the sophomore Mathematics major with the highest GPA}{Westminster College}
 	
 	\resheading{\textcolor{white}{\ \faCheckSquare \ Skills}}
 	\vspace{-16pt}
@@ -172,7 +165,7 @@
 		\item[\faChartLine \ Data Science:] A.I., Big Data, Informatics, Machine Learning, Network Science
 		\item[\faDollarSign \ Finance and Economics:] Algorithmic Trading, Corporate Credit Analysis, GAAP, Risk Analysis
 		\item[\faCode \ Languages:] Python (\& Cython), Java, C++, Bash, R, HTML, CSS, XML, Javascript, SQL, Visual Basic
-		\item[\faFileCode \ Software \& Tools:] AWS, Google Cloud, NLTK, Numpy, Pandas, scikit-learn, Selenium
+		\item[\faFileCode \ Software \& Tools:] AWS, Linux, NLTK, Numpy, Pandas, scikit-learn, Selenium
 	\end{description}
 	
 \end{document}
