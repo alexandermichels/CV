@@ -1,130 +1,62 @@
-% resume.tex
-%
-% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-% (c) 2007-2014 Todd C. Miller <Todd.Miller@sudo.ws> http://www.sudo.ws/todd
-%
-% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
-
-\documentclass[letterpaper,11pt]{article}
-
-%-----------------------------------------------------------
-\usepackage[empty]{fullpage}
-\usepackage{hyperref, enumitem}
-  \setlist[itemize]{leftmargin=*}
-\usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{electricpurple}{rgb}{0.8, 0.2, 1.0}
-\RequirePackage{fontawesome5}
-
-\hypersetup{
-	colorlinks=true,
-	linkcolor=electricpurple,
-	filecolor=electricpurple,      
-	urlcolor=electricpurple,
-	citecolor=electricpurple,
-}
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-
-
-% Adjust margins to 0.5in on all sides
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
-
-%-----------------------------------------------------------
-%Custom commands
-\newcommand{\resitem}[1]{\item[--] #1}
-
-\newcommand{\resheading}[1]{{\vspace{2pt}\large \colorbox{electricpurple}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}\vspace{3pt}}
-
-\newcommand{\ressubheading}[4]{
-	\textbf{#1} \hfill #2 \\
-	\textit{#3} \hfill \textit{#4} \\
-	\vspace{-6pt}
-}
-
-\newcommand{\Position}[4]{
-	\textbf{#1} \hfill \faMapPin \ #2 \\
-	\textit{#3} \hfill \textit{#4} \\
-	\vspace{1pt}
-}
-
-\newcommand{\Talk}[4]{
-	\textbf{#1} \hfill #2 \\
-	\textit{#3} \hfill \faMapMarker \ #4 \\
-}
-
-\newcommand{\Research}[3]{
-	\textbf{#1}\\
-	\textit{#2} \hfill \textit{#3} \\
-}
-
-\newcommand{\Award}[4]{
-	\textbf{#1} \hfill #2 \\
-	\textit{``#3''} \hfill #4 \\
-}
-
-\newenvironment{titemize}{
-	\vspace{-12pt}
-	\begin{itemize}
-		\setlength{\itemsep}{0pt}
-		\setlength{\parskip}{0pt}
-		\setlength{\topsep}{0pt}
-}{\end{itemize}\vspace{-12pt}}
-
+\documentclass{acmresume}
 
 %-----------------------------------------------------------
 
 
 \begin{document}
 	
+	\begin{multicols}{2}
+		\vspace*{.1cm}
+		\textbf{\Huge Alexander C. Michels}\\ \columnbreak
+		\flushright{\href{tel:17167530414}{\faPhone \ \textbf{\textit{(716) 753 0414}}} \\
+			\href{http://alexandermichels.github.io}{\faGlobeAmericas \ \textbf{\textit{alexandermichels.github.io}}} \\
+			\href{mailto:alexandercm4297@gmail.com}{\textbf{\faEnvelope \ \textit{alexandercm4297@gmail.com}}} \\ \href{https://www.linkedin.com/in/alexmichels/}{\faLinkedin \ \textbf{\textit{linkedin.com/in/alexmichels}}} \\
+		  \href{https://github.com/alexandermichels}{\faGithub \ \textbf{\textit{github.com/alexandermichels}}}}
+	\end{multicols}
 	
-
-		\textbf{\LARGE Alexander C. Michels} \\
-	 \href{mailto:alexandercm4297@gmail.com}{\textbf{\faEnvelope \ \texttt{alexandercm4297@gmail.com}}} \hfill \href{https://www.linkedin.com/in/alexmichels/}{\faLinkedin \ \textbf{\texttt{linkedin.com/in/alexmichels}}} \\
-	\href{http://alexandermichels.github.io}{\faGlobeAmericas \ \textbf{\texttt{alexandermichels.github.io}}} \hfill \href{tel:17167530414}{\faPhone \ \textbf{\texttt{(716) 753 0414}}} \hfill \href{https://github.com/alexandermichels}{\faGithub \ \textbf{\texttt{github.com/alexandermichels}}} \\
-	
-	\resheading{\textcolor{white}{\ \faGraduationCap \ Education}}
+	\resheading{\faGraduationCap~Education}
 
 		\Position{Westminster College}{New Wilmington, PA}{Bachelor of Science in Mathematics and Financial Economics}{August 2015 - May 2019}
 		\begin{titemize}
-			\resitem{3.7 GPA; Minor in Computer Science}
-			\resitem{Honors Thesis in Hierarchical Temporal Memory focused on A.I. and Time Series Analysis}
-			\resitem{\textbf{Extra-Curriculars: }Endowment Fund, Honors Program, Financial Analyst Program, Kappa Mu Epsilon, Men’s Choir, Omicron Kappa Sigma, Pi Sigma Pi, and Secretary of Robotics Team}
+			\resitem{3.7 GPA;\hspace{.5cm} Minor in Computer Science;\hspace{.5cm} Honors in Computer Science and Math}
 		\end{titemize}
+	\vspace{3pt}
+	\Position{University of Illinois at Urbana-Champaign}{Champaign, IL}{Ph.D. in Informatics}{August 2019-Present}
+	\begin{titemize}
+		\resitem{Pursuing the Spatial Informatics concentration under Dr. Shaowen Wang}
+	\end{titemize}
 	
-	\resheading{\textcolor{white}{\ \faBriefcase  \  Experience}}
+	\resheading{\faBriefcase~Experience}
+	
+		\Position{Geographic Information Science Researcher}{Champaign, IL}{CyberGIS Center}{March 2019-Present}
 	
 		\Position{Informatics Researcher}{Los Angeles, CA}{Institute for Pure and Applied Mathematics at UCLA / Praedicat, Inc.}{June 2018 -August 2018}
 
-		\Position{Systems Administrator and Software Engineer}{New Wilmington, PA}{\href{http://titanradio.net/}{Titan Radio} and \href{https://www.wcn247.com/}{WCN 24/7}}{May 2018 - Present}
+		\Position{Systems Administrator and Software Engineer}{New Wilmington, PA}{\href{http://titanradio.net/}{Titan Radio} and \href{https://www.wcn247.com/}{WCN 24/7}}{May 2018 - May 2019}
 		
-		\Position{Teaching Assistant and Tutor}{New Wilmington, PA}{Westminster College}{August 2015 - Present}
+		%\Position{Teaching Assistant and Tutor}{New Wilmington, PA}{Westminster College}{August 2015 - December 2018}
 		
-		\Position{Data Scientist}{New Castle, PA}{\href{http://treloaronline.com/}{Treloar \& Heisel}}{September 2018 - Present}
+		\Position{Data Scientist}{New Castle, PA}{\href{http://treloaronline.com/}{Treloar \& Heisel}}{September 2018 - December 2018}
 		
 		\Position{Financial Analyst}{Various}{Program with Moody’s Investors Service VP Ben Nelson}{December 2017 - August 2018}
 
 		\Position{Computational Finance Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
 
 
-	\resheading{\textcolor{white}{\ \faBook \ Research}}
+	\resheading{\faBook~Research}
 	
 	\Research{Using ARMA Models to Capture the Predictive Power of Cortical Learning Algorithms}{December 2017 - Present}{advised by Dr. C. David Shaffer and Dr. Carolyn Cuff}
 
 	\Research{Computational Fact-Checking through Relational Similarity based Path Mining}{July 2018 - Present}{with Himanshu Ahuja}
 	
-	\Research{Minimum Square Deviance k-Chinese Postman Problems}{August 2017 - January 2018}{advised by Dr. Fontes Merz}
+	%\Research{Minimum Square Deviance k-Chinese Postman Problems}{August 2017 - January 2018}{advised by Dr. Fontes Merz}
 	
 	\Research{Algorithmic Game Theory}{January 2017 - May 2017}{advised by Dr. Carolyn Cuff}
 
+
+%\resheading{\faNewspaper~Publications}
 	
-		\resheading{\textcolor{white}{\ \faChalkboardTeacher \ Conferences and Talks}}
+		\resheading{\faChalkboardTeacher~Conferences and Talks}
 		
 		\Talk{``Capturing the Predictive Power of Cortical Learning Algorithms"}{April 2019}{National Conference on Undergraduate Research}{Atlanta, GA}
 		
@@ -144,7 +76,7 @@
 
 	\pagebreak
 
-	\resheading{\textcolor{white}{\ \faAward \ Awards}}
+	\resheading{\faAward~Awards}
 
 		\Award{Best Robot in Division Prize for Senior Unique Division}{April 2018}{Robot in the Division with the lowest Total Final Scores}{Trinity Fire Fighting Robot Contest}
 
@@ -158,8 +90,7 @@
 
 		\Award{Mathematics Book Award}{March 2017}{presented to the sophomore Mathematics major with the highest GPA}{Westminster College}
 	
-	\resheading{\textcolor{white}{\ \faCheckSquare \ Skills}}
-	\vspace{-16pt}
+	\resheading{\faCogs~Skills}
 	\begin{description}[itemsep=1pt]
 		\item[\faServer \ Computer Science:]  Parallel Programming,  Software Engineering, System Administration
 		\item[\faChartLine \ Data Science:] A.I., Big Data, Informatics, Machine Learning, Network Science
