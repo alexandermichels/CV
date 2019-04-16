@@ -4,5 +4,8 @@
 *.out
 *.synctex.gz
 *.toc
+*.bbl
+*.blg
 
 CoverLetters/*
+MasterCurriculumVitae.*
