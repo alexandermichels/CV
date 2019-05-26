@@ -65,7 +65,7 @@
 
 \newcommand{\GithubProject}[2]{
     \vspace{6pt}
-	\textbf{{\large #1}}\hfill \href{#2}{\faGithub~Repo:~#2}\\
+	\textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{Repo:~#2}}\\
 	\vspace{-9pt}
 	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
 	\vspace{-12pt}
