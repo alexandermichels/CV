@@ -49,8 +49,8 @@
 }
 
 \newcommand{\Talk}[4]{
-	\textbf{#1} \hfill #2 \\
-	\textit{#3} \hfill \faMapMarker \ #4 \\
+	\hspace{.5cm}\textbf{#1} \hfill \textit{#2} \\
+	\hspace{.5cm}\textit{#3} \hfill \faMapMarker \ #4 \\
 }
 
 \newcommand{\Research}[3]{
@@ -88,3 +88,5 @@
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
 	\vspace{3pt}
 }
+
+\usepackage{multicol}
