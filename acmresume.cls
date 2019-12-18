@@ -71,6 +71,14 @@
 	\vspace{-12pt}
 }
 
+\newcommand{\Project}[2]{
+    \vspace{6pt}
+    \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{Website:~#2}}\\
+    \vspace{-9pt}
+    \noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
+    \vspace{-12pt}
+}
+
 \newenvironment{titemize}{
 	\vspace{-12pt}
 	\begin{itemize}
