@@ -2,7 +2,9 @@
 
 %-----------------------------------------------------------
 
-
+\usepackage[backend=biber,style=numeric,sorting=ydnt,maxbibnames=99,refsection=section]{biblatex}
+\addbibresource{Bib.bib}
+\AtBeginBibliography{\vspace*{-10pt}}
 \begin{document}
 	
 	\begin{multicols}{2}
@@ -16,14 +18,14 @@
 	
 	\resheading{\faGraduationCap~Education}
 	
-		\Position{University of Illinois at Urbana-Champaign}{Champaign, IL}{Ph.D. in Informatics}{June 2019-Present}
+		\Position{Ph.D. in Informatics}{Champaign, IL}{University of Illinois at Urbana-Champaign}{June 2019-Present}
 		\begin{titemize}
 			\item{Pursuing the Spatial Informatics concentration under Dr. Shaowen Wang}
 		\end{titemize}
 
-		\Position{Westminster College}{New Wilmington, PA}{Bachelor of Science in Mathematics and Financial Economics}{August 2015 - May 2019}
+		\Position{B.S. in Mathematics and Financial Economics}{New Wilmington, PA}{Westminster College}{August 2015 - May 2019}
 		\begin{titemize}
-            \item Honors Thesis: ``Capturing the Predictive Power of Cortical Learning Algorithms
+            \item \textbf{Honors Thesis}: ``Capturing the Predictive Power of Cortical Learning Algorithms''
 			\item{Minor in Computer Science | Graduated Cum Laude | Honors in Computer Science and Math | 3.7 GPA}
 		\end{titemize}
 	
@@ -31,7 +33,7 @@
 	
 		\Position{CyberGIS and CyberInfrastructure Researcher}{Champaign, IL}{\href{https://cybergis.illinois.edu/}{CyberGIS Center and CyberInfrastructure} \& \href{http://www.cigi.illinois.edu/}{Geospatial Information Laboratory (CIGI)}}{June 2019-Present}
         \begin{titemize}
-            \item Building cyberinfrastructure using Docker Swarm, Hadoop and Kubernetes clusters. I manage an undergraduate research assistant and maintain the development branch of \hyperlink{https://cybergis.illinois.edu/project/cybergis-jupyter/}{CyberGIS-Jupyter}
+            \item Building cyberinfrastructure using Docker Swarm, Hadoop and Kubernetes clusters. I manage an undergraduate research assistant and maintain the development branch of \href{https://cybergis.illinois.edu/project/cybergis-jupyter/}{CyberGIS-Jupyter}
             \item Programming spatially-explicit models for disease and land-use change
         \end{titemize}
 	
@@ -41,88 +43,79 @@
             \item{Worked for IPAM to develop a novel algorithm for computational fact-checking on knowledge graphs and a self-supervised machine learning algorithm for sentence importance which outperformed TF-IDF.}
         \end{titemize}
 
-		\Position{Computational Finance Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
-        \begin{titemize}
-            \item Integrated cryptocurrency trading into Dr. Shaffer's algorithmic currency trading application.
-        \end{titemize}
-    
-    \resheading{\faUniversity~Teaching Experience}
-    
-    \Position{Teaching Assistant and Tutor}{New Wilmington, PA}{Westminster College}{August 2015 - December 2018}
-    \begin{titemize}
-        \item Assisted professors in grading, working with students individually, and developing curriculum for classes covering coursework in Calculus, Computer Science, and Operations Research.
-    \end{titemize}
-
-
 		\resheading{\faNewspaper~Papers}
-		\begingroup
-		\renewcommand{\section}[2]{}
-		\bibliographystyle{ieeetr}
-		\nocite{*} 
-		\bibliography{Bib}{}
-		\endgroup
+		\vspace{-.75cm}
+		\nocite{*}
+		\printbibliography[title={Peer-Reviewed Publications},keyword={peer}]
+		\vspace{-.9cm}
+		\nocite{*}
+		\printbibliography[title={Submitted/Under Review},keyword={submitted}]
+		\vspace{-.9cm}
+		\nocite{*}
+		\printbibliography[title={Other Publications},keyword={other}]
+		
+		\resheading{\faAward~Awards}
+		
+		\Award{Cyberinfrastructure Specialty Group Robert Raskin Student Competition}{April 2020}{First Place for Research in Geospatial Cyberinfrastructure}{American Association of Geographers (AAG)}
+		
+		\Award{UCGIS Prize for Advances in Geospatial Problem Solving}{July 2019}{Advancing Reproducibility in Geospatial Research at the AAG-UCGIS Summer School 2019}{UIUC}
+		
+		\Award{Best Robot in Division Prize for Senior Unique Division}{April 2018}{Robot in the Division with the lowest Total Final Scores}{Trinity Fire Fighting Robot Contest}
+		
+		\Award{North America Award for Level 2}{April 2018}{The top North American robot in Level 2}{Trinity Fire Fighting Robot Contest}
+		
+		\Award{Dr. Thomas R. Nealeigh Mathematics Scholarship}{March 2018}{awarded to an outstanding junior or senior mathematics major}{Westminster College}
+		
+		\Award{Paul E. Brown Memorial Scholarship}{March 2017}{given based on merit and academic achievement}{Westminster College}
+		
+		\Award{COMAP International Mathematical Modeling Competition Honorable Mention}{January 2017}{excellent modeling and sensitivity analysis}{COMAP International Mathematical Modeling Competition}
+		
+		\vspace{.1cm}
+       
+        \resheading{\faDollarSign~Fellowships \& Grants}
+            
+         
+         \Grant{Computational Research Techniques Fellowship}{June 2020}{Awarded funds to attend the TACC Summer Institute on Applied Parallel Programming}{TACC}
         
-        \pagebreak
+        \Grant{\href{https://www.sesync.org/project/graduate-pursuits-request-for-proposals/financial-opacity-and-challenges-to-forest}{Financial Opacity and Challenges to Forest Governance in Indonesia and Malaysia}}{February 2020}{Graduate Pursuit Member}{National Socio-Environmental Synthesis Center (SESYNC)}
         
-        \resheading{\faBookOpen~Research Interests}
-        
-        \begin{multicols}{3}
-            \begin{titemize}
-                \item Agent-Based Models
-                \item Complex Systems
-                \item High-Performance Computing
-                \item Economic Geography
-                \item Network Science
-                \item Spatial Optimization
-            \end{titemize}
-        \end{multicols}
 	
 		\resheading{\faChalkboardTeacher~Selected Presentations}
         
-        \textbf{Oral Presentations}
-		
-		\Talk{Capturing the Predictive Power of Cortical Learning Algorithms}{April 2019}{National Conference on Undergraduate Research}{Atlanta, GA}
-		
-		\Talk{Computational Fact-Checking through Knowledge Graphs}{January 2019}{AMS Contributed Paper Session at 2019 Joint Mathematics Meeting}{Baltimore, MD}
-		
-		\Talk{Information Extraction and Aggregation for Business Profiling}{July 2018}{Invited Talk at Institute for Pure and Applied Mathematics}{Los Angeles, CA}
-		
-		\Talk{Decentralizing the World with Blockchain}{April 2018}{Undergraduate Research \& Arts Celebration}{New Wilmington, PA}
-		
-		\Talk{Repeated Play Games}{April 2017}{MAA, Allegheny Mountain Section Meeting}{Pittsburgh, PA}
-		
-		\Talk{Optimizing Throughput, Cost, and Safety in Toll Booth Plazas}{February 2017}{Pi Mu Epsilon Regional Conference}{Youngstown, OH}
-        
-        \textbf{Poster Presentations}
-        
-        
-        \Talk{CyberGIS-Jupyter for Spatially Explicit Agent-based Modeling}{November 2019}{Illinois GIS Day}{Champaign, IL}
-        
-        \Talk{Reproducible Spatial Data Science with Kubernetes on CyberGIS-Jupyter}{November 2019}{Illinois GIS Day}{Champaign, IL}
-        
-        \Talk{Computational Fact-Checking through Knowledge Graphs}{January 2019}{Undergraduate Research Poster Session at 2019 Joint Mathematics Meeting}{Baltimore, MD}
-        
-        \Talk{Agent-Based Simulations for Repeated Play Game Theory}{April 2017}{Undergraduate Research \& Arts Celebration}{New Wilmington, PA}
-
-	\resheading{\faAward~Awards}
+       
+       \Talk{Particle Swarm Optimization for Calibration in Spatially Explicit ABMs}{April 2020}{American Association of Geographers}{Denver, CO, virtual}
+       
+       \Talk{Capturing the Predictive Power of Cortical Learning Algorithms}{April 2019}{National Conference on Undergraduate Research}{Atlanta, GA}
+       
+       \Talk{Computational Fact-Checking through Knowledge Graphs}{January 2019}{AMS Contributed Paper Session at 2019 Joint Mathematics Meeting}{Baltimore, MD}
+       
+       \Talk{Information Extraction and Aggregation for Business Profiling}{July 2018}{Invited Talk at Institute for Pure and Applied Mathematics}{Los Angeles, CA}
+       
+       \Talk{Repeated Play Games}{April 2017}{Mathematics Assocaiton of America, Allegheny Mountain Section Meeting}{Pittsburgh, PA}
+       
+       \Talk{Optimizing Throughput, Cost, and Safety in Toll Booth Plazas}{February 2017}{Pi Mu Epsilon Regional Conference}{Youngstown, OH}
+       
+       
+       \resheading{\faUniversity~Teaching Experience}
+       
+       \Position{Teaching Assistant and Tutor}{New Wilmington, PA}{Westminster College}{August 2015 - December 2018}
+       \begin{titemize}
+       	\item Assisted professors in grading, working with students individually, and developing curriculum for classes covering coursework in Calculus, Computer Science, and Operations Research.
+       \end{titemize}
+       
+    \resheading{\faBookOpen~Research Interests}
     
-    \Award{Cyberinfrastructure Specialty Group Robert Raskin Student Competition Finalist}{November 2019}{research in geospatial cyberinfrastructure}{American Association of Geographers (AAG)}
+    \begin{multicols}{3}
+    	\begin{titemize}
+    		\item Agent-Based Models
+    		\item Complex Systems
+    		\item Economic Geography
+    		\item High-Performance Computing
+    		\item Network Science
+    		\item Spatial Analysis
+    	\end{titemize}
+    \end{multicols}
     
-    \Award{UCGIS Prize for Advances in Geospatial Problem Solving}{July 2019}{Advancing Reproducibility in Geospatial Research at the AAG-UCGIS Summer School 2019}{UCGIS}
-
-    \Award{Best Robot in Division Prize for Senior Unique Division}{April 2018}{Robot in the Division with the lowest Total Final Scores}{Trinity Fire Fighting Robot Contest}
-    
-    \Award{North America Award for Level 2}{April 2018}{The top North American robot in Level 2}{Trinity Fire Fighting Robot Contest}
-    
-    \Award{Dr. Thomas R. Nealeigh Mathematics Scholarship}{March 2018}{awarded to an outstanding junior or senior mathematics major}{Westminster College}
-    
-    \Award{Paul E. Brown Memorial Scholarship}{March 2017}{given based on merit and academic achievement}{Westminster College}
-    
-    \Award{Honorable Mention}{January 2017}{excellent modeling and sensitivity analysis}{COMAP International Mathematical Modeling Competition}
-    
-    \Award{Mathematics Book Award}{March 2017}{presented to the sophomore Mathematics major with the highest GPA}{Westminster College}
-    
-    \vspace{.3cm}
     \resheading{\faUsers~Professional Associations}
     
     \textbf{American Association of Geographers (AAG)} \\
@@ -135,7 +128,7 @@
         \item Spatial Analysis and Modeling
         \item Transportation Geography
     \end{titemize}
-\end{multicols}
+    \end{multicols}
 
 
 \end{document}

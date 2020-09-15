@@ -7,7 +7,7 @@
 \RequirePackage{enumitem}
 \setlist[itemize]{leftmargin=*}
 \RequirePackage[usenames,dvipsnames]{xcolor}
-\definecolor{color1}{rgb}{.8,.2,1}
+\definecolor{color1}{rgb}{.6,.15,.85}
 \RequirePackage{fontawesome5}
 \RequirePackage{calc}
 \RequirePackage{multicol}
@@ -49,8 +49,13 @@
 }
 
 \newcommand{\Talk}[4]{
-	\hspace{.5cm}\textbf{#1} \hfill \textit{#2} \\
-	\hspace{.5cm}\textit{#3} \hfill \faMapMarker \ #4 \\
+	\textbf{#1} \hfill \textit{#2} \\
+	\textit{#3} \hfill \faMapMarker \ #4 \\
+}
+
+\newcommand{\Workshop}[4]{
+    \textbf{#1} \hfill \textit{#2} \\
+    \textit{#3} \hfill \faMapMarker \ #4 \\
 }
 
 \newcommand{\Research}[3]{
@@ -73,7 +78,7 @@
 
 \newcommand{\Project}[2]{
     \vspace{6pt}
-    \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{Website:~#2}}\\
+    \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{Link:~#2}}\\
     \vspace{-9pt}
     \noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
     \vspace{-12pt}
@@ -89,7 +94,8 @@
 
 \newlength{\linelength}
 \newcommand{\resheading}[1]
-{
+{	
+	\vspace{3pt}
 	\setlength{\linelength}{\linewidth/2-\widthof{#1}}
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
 	\hfill {\Large \textbf{#1}} \hfill 
@@ -97,4 +103,10 @@
 	\vspace{3pt}
 }
 
+\newcommand{\Grant}[4]{
+    \textbf{#1}\hfill \textit{#2} \\
+    \textit{#3} \hfill #4\\
+}
+
 \usepackage{multicol}
+\usepackage[utf8]{inputenc}

@@ -6,7 +6,9 @@
 *.toc
 *.bbl
 *.blg
+*.bcf
+*.run.xml
 
 CoverLetters/*
 MasterCurriculumVitae.*
-TutoringResume.*
+Resumes/*
