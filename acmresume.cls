@@ -12,11 +12,21 @@
 \RequirePackage{calc}
 \RequirePackage{multicol}
 
+\usepackage[
+	backend=biber,
+	style=authoryear,
+	sorting=none,
+	maxbibnames=99,
+	refsection=section
+]{biblatex}
+
+\addbibresource{Bib.bib}
+
 
 \hypersetup{
 	colorlinks=true,
 	linkcolor=color1,
-	filecolor=color1,      
+	filecolor=color1,
 	urlcolor=color1,
 	citecolor=color1,
 }
@@ -94,11 +104,11 @@
 
 \newlength{\linelength}
 \newcommand{\resheading}[1]
-{	
+{
 	\vspace{3pt}
 	\setlength{\linelength}{\linewidth/2-\widthof{#1}}
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
-	\hfill {\Large \textbf{#1}} \hfill 
+	\hfill {\Large \textbf{#1}} \hfill
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
 	\vspace{3pt}
 }
