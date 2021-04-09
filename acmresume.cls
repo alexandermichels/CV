@@ -15,7 +15,7 @@
 \usepackage[
 	backend=biber,
 	style=authoryear,
-	sorting=none,
+	sorting=ydnt,
 	maxbibnames=99,
 	refsection=section
 ]{biblatex}
@@ -25,7 +25,7 @@
 
 \hypersetup{
 	colorlinks=true,
-	linkcolor=color1,
+	linkcolor=black,
 	filecolor=color1,
 	urlcolor=color1,
 	citecolor=color1,
@@ -39,17 +39,46 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{0.75in}
 
-\let\olditem\item
-\renewcommand{\item}[1]{\olditem[--] #1}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\renewcommand{\headrulewidth}{0pt} % no line in header area
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage\ of \pageref{LastPage}}           % page number in "outer" position of footer line
 
-\newcommand{\desc}[1]{\olditem #1}
+\newcommand{\titem}[1]{\item[--] #1}
+
+\newcommand{\desc}[1]{\item #1}
 
 \newcommand{\ressubheading}[4]{
 	\textbf{#1} \hfill #2 \\
 	\textit{#3} \hfill \textit{#4} \\
 	\vspace{-6pt}
+}
+
+
+\newcommand{\Award}[4]{
+	\textbf{#1} \hfill #2 \\
+	\textit{``#3''} \hfill #4 \\
+	\vspace{4pt}
+}
+
+\newcommand{\GithubProject}[2]{
+	\vspace{6pt}
+	\textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{#2}}\\
+	\vspace{-9pt}
+	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
+	\vspace{-12pt}
+}
+
+\newcommand{\Grant}[4]{
+	\textbf{#1}\hfill \textit{#2} \\
+	\textit{#3} \hfill #4\\
+	\vspace{4pt}
 }
 
 \newcommand{\Position}[4]{
@@ -58,40 +87,30 @@
 	\vspace{1pt}
 }
 
-\newcommand{\Talk}[4]{
-	\textbf{#1} \hfill \textit{#2} \\
-	\textit{#3} \hfill \faMapMarker \ #4 \\
-}
-
-\newcommand{\Workshop}[4]{
-    \textbf{#1} \hfill \textit{#2} \\
-    \textit{#3} \hfill \faMapMarker \ #4 \\
-}
-
-\newcommand{\Research}[3]{
-	\textbf{#1}\\
-	\textit{#2} \hfill \textit{#3} \\
-}
-
-\newcommand{\Award}[4]{
-	\textbf{#1} \hfill #2 \\
-	\textit{``#3''} \hfill #4 \\
-}
-
-\newcommand{\GithubProject}[2]{
-    \vspace{6pt}
-	\textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{Repo:~#2}}\\
+\newcommand{\Project}[2]{
+	\vspace{6pt}
+	\textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{#2}}\\
 	\vspace{-9pt}
 	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
 	\vspace{-12pt}
 }
 
-\newcommand{\Project}[2]{
-    \vspace{6pt}
-    \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{Link:~#2}}\\
-    \vspace{-9pt}
-    \noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
-    \vspace{-12pt}
+\newcommand{\Research}[3]{
+	\textbf{#1}\\
+	\textit{#2} \hfill \textit{#3} \\
+	\vspace{4pt}
+}
+
+\newcommand{\Talk}[4]{
+	\textbf{#1} \hfill \textit{#2} \\
+	\textit{#3} \hfill \faMapMarker \ #4 \\
+	\vspace{4pt}
+}
+
+\newcommand{\Workshop}[4]{
+    \textbf{#1} \hfill \textit{#2} \\
+    \textit{#3} \hfill \faMapMarker \ #4 \\
+    \vspace{4pt}
 }
 
 \newenvironment{titemize}{
@@ -111,11 +130,6 @@
 	\hfill {\Large \textbf{#1}} \hfill
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
 	\vspace{3pt}
-}
-
-\newcommand{\Grant}[4]{
-    \textbf{#1}\hfill \textit{#2} \\
-    \textit{#3} \hfill #4\\
 }
 
 \usepackage{multicol}

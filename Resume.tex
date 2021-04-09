@@ -1,5 +1,5 @@
 \documentclass{acmresume}
-
+\fancyfoot[RE,LO]{\textit{Alexander Michels -- Resume}} % other info in "inner" position of footer line
 %-----------------------------------------------------------
 
 \begin{document}
@@ -7,6 +7,7 @@
 	\begin{multicols}{2}
 		\vspace*{.1cm}
 		\textbf{\Huge Alexander C. Michels}\\ \columnbreak
+        \hfill\href{tel:17167530414}{\faPhone~\textbf{+1 (716) 753 0414}} \\
         \hfill\href{mailto:alexandercm4297@gmail.com}{\textbf{\faEnvelope~michels9@illinois.edu}} \\
         \hfill\href{http://alexandermichels.github.io}{\faGlobeAmericas~\textbf{alexandermichels.github.io}} \\
         \hfill\href{https://github.com/alexandermichels}{\faGithub~\textbf{github.com/alexandermichels}}
@@ -15,74 +16,63 @@
 	\resheading{\faGraduationCap~Education}
 	
 		\Position{University of Illinois at Urbana-Champaign}{Champaign, IL}{Ph.D. in Informatics}{June 2019-Present}
-		\begin{titemize}
-			\item{Pursuing the Spatial Informatics concentration under Dr. Shaowen Wang}
-		\end{titemize}
 
 		\Position{Westminster College}{New Wilmington, PA}{Bachelor of Science in Mathematics and Financial Economics}{August 2015 - May 2019}
         \begin{titemize}
-            \item Honors Thesis: ``Capturing the Predictive Power of Cortical Learning Algorithms''
-            \item{Minor in Computer Science | Graduated Cum Laude | Honors in Computer Science and Math | 3.7 GPA}
+            \titem{Minor in Computer Science | Honors in Computer Science and Math | Graduated Cum Laude | 3.7 GPA}
         \end{titemize}
 	
 	\resheading{\faBriefcase~Experience}
 	
 		\Position{CyberGIS and CyberInfrastructure Researcher}{Champaign, IL}{\href{https://cybergis.illinois.edu/}{CyberGIS Center and CyberInfrastructure} \& \href{http://www.cigi.illinois.edu/}{Geospatial Information Laboratory (CIGI)}}{June 2019-Present}
         \begin{titemize}
-            \item Building cyberinfrastructure using Docker Swarm, Hadoop and Kubernetes clusters. I manage an undergraduate research assistant and maintain the development branch of \href{https://cybergis.illinois.edu/project/cybergis-jupyter/}{CyberGIS-Jupyter}
-            \item Programming spatially-explicit models for disease and land-use change
+        	\titem Work for the ``Algorithm \& Systems'' and ``Spatial Modeling'' teams where I administrate cyberinfrastructure and develop spatial models.
+            \titem Redesigned \href{https://cybergisxhub.cigi.illinois.edu/}{CyberGISX} to run on Kubernetes allowing for scalability and rewrote images to use shared software directories to improve efficiency.
+            \titem Developed Docker-based Hadoop cluster for educational and research applications.
+            \titem Wrote and published multiple spatial models for educational and research purposes.
         \end{titemize}
 		
 		\Position{Data Scientist and Informatics Reseacher}{Los Angeles, CA}{\href{http://www.ipam.ucla.edu/}{Institute for Pure and Applied Mathematics at UCLA} \& \href{https://www.praedicat.com/}{Praedicat, Inc.}}{June 2018 -August 2018}
         \begin{titemize}
-            \item{Worked for Praedicat, Inc. automating information extraction, classification, and aggregation from web data for business profiling of over 52,600 companies and corporate entities.}
-            \item{Worked for IPAM to develop a novel algorithm for computational fact-checking on knowledge graphs and a self-supervised machine learning algorithm for sentence importance which outperformed TF-IDF.}
+            \titem{Worked for Praedicat, Inc. automating information extraction, classification, and aggregation from web data for business profiling of over 52,600 companies and corporate entities.}
+            \titem{Worked for IPAM to develop a novel algorithm for computational fact-checking on knowledge graphs and a self-supervised machine learning algorithm for sentence importance which outperformed TF-IDF.}
         \end{titemize}
 
 		\Position{Systems Administrator and Software Engineer}{New Wilmington, PA}{\href{http://titanradio.net/}{Titan Radio} and \href{https://www.wcn247.com/}{WCN 24/7}}{May 2018 - May 2019}
         \begin{titemize}
-            \item{Responsible for the technology required to keep the radio and television station operating.}
+            \titem{Responsible for the technology required to keep the radio and television station operating.}
         \end{titemize}
 		
 		\Position{Information Technology Intern}{New Castle, PA}{\href{http://treloaronline.com/}{Treloar \& Heisel}}{September 2018 - December 2018}
         \begin{titemize}
-            \item{Maintained databases and wrote applications for company use in Java, Python, and Visual Basic.}
-        \end{titemize}
-
-		\Position{Computational Finance Research Assistant}{New Wilmington, PA}{Dr. Charles Shaffer}{January 2017 - May 2018}
-        \begin{titemize}
-            \item Integrated cryptocurrency trading into Dr. Shaffer's algorithmic currency trading application.
-        \end{titemize}
-		
-	
-		\resheading{\faCodeBranch~Projects}
-        
-        \Project{CyberGIS-Jupyter}{https://cybergis.illinois.edu/project/cybergis-jupyter/}
-        \begin{titemize}
-            \item Platform for reproducible spatial data science using JupyterHub on DockerSwarm and Kubernetes
-            \item Responsible for development using K8s on Openstack.
-        \end{titemize}
-		
-		\Project{Where COVID-19}{https://wherecovid19.cigi.illinois.edu/}
-		\begin{titemize}
-			\item Dashboard for displaying up-to-date COVID-19 statistics.
-			\item Wrote the pipeline to calculate spatial accessibility to medical resources. DOI: \href{https://doi.org/10.1186/s12942-020-00229-x}{10.1186/s12942-020-00229-x}
-		\end{titemize}
-	
-        \GithubProject{MintSetup}{https://github.com/alexandermichels/MintSetup}
-        \begin{titemize}
-            \item Python application with PyQt5 GUI that produces Bash scripts
-            \item Allows users to produce customized Bash scripts for installing applications and removing pre-installed software
+            \titem{Maintained databases and wrote applications for company use in Java, Python, and Visual Basic.}
         \end{titemize}
     
-    
-    		\resheading{\faCogs~Skills}
+    \resheading{\faCogs~Skills}
         \begin{description}[topsep=1pt,itemsep=1pt]
-            \desc[\faChartLine \ Data Science:] Big Data, G.I.S., Machine Learning, Parallel Programming, Network Science
-            \desc[\faCode \ Languages:] Python (\& Cython), Java, C++, Bash, R, HTML, CSS, XML, Javascript
-            \desc[\faServer~Technologies:] Ansible, Docker (Swarm), Hadoop (HDFS/Spark/Yarn), Kubernetes
-            \desc[\faDesktop~Operating Systems:] Linux (esp. CentOS, Gentoo, Mint, Raspbian, \& Ubuntu), Windows
+        	\desc[\faChartLine~Data Science:] Big Data, G.I.S., Git, Machine Learning, Parallel Programming, Network Science
+        	
+        	\desc[\faCode~Languages:] Python (\& Cython), Bash, Java, C++, R
+        	
+        	\desc[\faServer~Technologies:] Docker, Hadoop (HDFS/Spark/Yarn), Kubernetes, OpenStack, Terraform
+        	
+        	\desc[\faDesktop~Operating Systems:] Linux (esp. Mint \& Ubuntu), Windows
         \end{description}
+    
+    
+    \resheading{\faCodeBranch~Projects}
+    
+    \Project{CyberGISX}{https://cybergisxhub.cigi.illinois.edu/}
+    \begin{titemize}
+    	\item Platform for reproducible spatial data science using JupyterHub on DockerSwarm and Kubernetes
+    	\item Developed version using K8s on Openstack \href{https://www.hydroshare.org/resource/e9686eadd4474b6587d83d9330d25854/}{integrated with Hydroshare}: \href{http://go.illinois.edu/cjw-k8s}{http://go.illinois.edu/cjw-k8s}
+    \end{titemize}
+    
+    \Project{WhereCOVID-19}{https://wherecovid19.cigi.illinois.edu/}
+    \begin{titemize}
+    	\item Dashboard for displaying up-to-date COVID-19 statistics.
+    	\item Wrote the pipeline to calculate spatial accessibility to medical resources. DOI: \href{https://doi.org/10.1186/s12942-020-00229-x}{10.1186/s12942-020-00229-x}
+    \end{titemize}
 
 	
 \end{document}
