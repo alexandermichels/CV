@@ -84,7 +84,7 @@
 \newcommand{\Position}[4]{
 	\textbf{#1} \hfill \faMapPin \ #2 \\
 	\textit{#3} \hfill \textit{#4} \\
-	\vspace{1pt}
+	\vspace{3pt}
 }
 
 \newcommand{\Project}[2]{
