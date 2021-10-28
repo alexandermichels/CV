@@ -8,16 +8,19 @@
 \setlist[itemize]{leftmargin=*}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 \definecolor{color1}{rgb}{.6,.15,.85}
+\definecolor{color2}{rgb}{.5,.05,.7}
 \RequirePackage{fontawesome5}
 \RequirePackage{calc}
 \RequirePackage{multicol}
 
 \usepackage[
 	backend=biber,
+	bibstyle=ieee,
 	style=authoryear,
 	sorting=ydnt,
-	maxbibnames=99,
-	refsection=section
+	maxbibnames=5,
+	refsection=section,
+	firstinits=true
 ]{biblatex}
 
 \addbibresource{Bib.bib}
@@ -26,23 +29,29 @@
 \hypersetup{
 	colorlinks=true,
 	linkcolor=black,
-	filecolor=color1,
-	urlcolor=color1,
-	citecolor=color1,
+	filecolor=color2,
+	urlcolor=color2,
+	citecolor=color2,
 }
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
 % Adjust margins to 0.5in on all sides
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-0.5in}
-\addtolength{\textheight}{0.75in}
+\usepackage{geometry}
+\geometry{
+	top=0.5in,            % <-- you want to adjust this
+	inner=0.5in,
+	outer=0.5in,
+	bottom=0.5in,
+	headheight=3ex,       % <-- and this
+	headsep=2ex,          % <-- and this
+	footskip=0.25in,
+}
 
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage[utf8]{inputenc}
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
 \renewcommand{\headrulewidth}{0pt} % no line in header area
@@ -67,6 +76,13 @@
 	\vspace{4pt}
 }
 
+\newcommand{\Edu}[3]{
+	\vspace{1pt}
+	\textbf{#1} \hfill \textbf{#2} \\
+	#3 \hfill \\
+	\vspace{2pt}
+}
+
 \newcommand{\GithubProject}[2]{
 	\vspace{6pt}
 	\textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{#2}}\\
@@ -83,7 +99,7 @@
 
 \newcommand{\Position}[4]{
 	\textbf{#1} \hfill \faMapPin \ #2 \\
-	\textit{#3} \hfill \textit{#4} \\
+	#3 \hfill \textit{#4} \\
 	\vspace{3pt}
 }
 
@@ -102,8 +118,8 @@
 }
 
 \newcommand{\Talk}[4]{
-	\textbf{#1} \hfill \textit{#2} \\
-	\textit{#3} \hfill \faMapMarker \ #4 \\
+	\hspace*{3mm}\textbf{#1} \hfill \textit{#2} \\
+	\hspace*{3mm}\textit{#3} \hfill \faMapMarker \ #4 \\
 	\vspace{4pt}
 }
 
@@ -114,23 +130,30 @@
 }
 
 \newenvironment{titemize}{
-	\vspace{-12pt}
+	\vspace{-15pt}
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0pt}
 		\setlength{\topsep}{0pt}
-	}{\end{itemize}\vspace{-6pt}}
+	}{\end{itemize}\vspace{-12pt}}
 
 \newlength{\linelength}
-\newcommand{\resheading}[1]
+\newcommand{\resheadinga}[1]
 {
 	\vspace{3pt}
-	\setlength{\linelength}{\linewidth/2-\widthof{#1}}
+	\setlength{\linelength}{\linewidth/2-\widthof{#1}*\real{0.8}}
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
 	\hfill {\Large \textbf{#1}} \hfill
 	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
 	\vspace{3pt}
 }
 
-\usepackage{multicol}
-\usepackage[utf8]{inputenc}
+\newcommand{\resheading}[1]
+{
+	\vspace{3pt}
+	\setlength{\linelength}{\linewidth - \widthof{#1} * \real{1.6} - 10mm}
+	\noindent\textcolor{color1}{\rule{10mm}{1mm}}
+	\hfill {\Large \textbf{#1}} \hfill
+	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
+	\vspace{3pt}
+}

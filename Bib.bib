@@ -1,3 +1,35 @@
+---
+---
+@inproceedings{PadmanabhanSpatialAPI2021,
+	author = {Padmanabhan, Anand and Xiao, Zimo and Vandewalle, Rebecca and Baig, Furqan and \textbf{Michels, Alexander} and Li, Zhiyu and Wang, Shaowen},
+	title = {CyberGIS-Compute for Enabling Computationally Intensive Geospatial Research},
+	year = 2021,
+	month = {11},
+	booktitle = {SpatialAPI'21: Proceedings of the 3rd ACM SIGSPATIAL International Workshop on APIs and Libraries for Geospatial Data Science},
+	doi = {https://dataoceanlab.github.io/spatial-api-2021/files/paper_5.pdf},
+	abstract = {{In this tutorial, we will first start with the basics of CyberGISJupyter and CyberGIS-Compute, then introduce the Python SDK for CyberGIS-Compute with a simple Hello World example. Then, we will take multiple real-world geospatial applications use-cases like spatial accessibility and wildfire evacuation simulation using agent based modeling. We will also provide pointers on how to contribute applications to the CyberGIS-Compute framework.}}
+}
+
+@inproceedings{MichelsGateways2021,
+	author       = {\textbf{Michels, Alexander} and Padmanabhan, Anand and Li, Zhiyu and Wang, Shaowen},
+	title        = {{Towards Reproducible Research on CyberGISX with Lmod and Easybuild}},
+	year         = 2021,
+	publisher    = {Zenodo},
+	booktitle    = {Gateways 2021},
+	month        = {10},
+	url          = {https://doi.org/10.5281/zenodo.5569659}
+}
+
+@inproceedings{PadmanabhanGateways2021,
+	author       = {Padmanabhan, Anand and Xiao, Zimo and Vandewalle, Rebecca and \textbf{Michels, Alexander} and Wang, Shaowen},
+	title        = {{Enabling Computationally Intensive Geospatial Research on CyberGIS-Jupyter with CyberGIS-Compute}},
+	year         = 2021,
+	publisher    = {Zenodo},
+	booktitle    = {Gateways 2021},
+	month        = {10},
+	url          = {https://doi.org/10.5281/zenodo.5570056}
+}
+
 @article{Kang2021.09.03,
 	abbr = {TGIS},
 	author = {Kang, Jeon-Young and \textbf{Michels, Alexander} and Crooks, Andrew and Aldstadt, Jared and Wang, Shaowen},
@@ -7,44 +39,42 @@
 	volume = {Early View},
 	number = {n/a},
 	pages = {},
-	doi = {https://doi.org/10.1111/tgis.12837},
-	abstract = {Abstract Calibration of agent-based models (ABMs) is a major challenge due to the complex nature of the systems being modeled, the heterogeneous nature of geographical regions, the varying effects of model inputs on the outputs, and computational intensity. Nevertheless, ABMs need to be carefully tuned to achieve the desirable goal of simulating spatiotemporal phenomena of interest, and a well-calibrated model is expected to achieve an improved understanding of the phenomena. To address some of the above challenges, this article proposes an integrated framework of global sensitivity analysis (GSA) and calibration, called GSA-CAL. Specifically, variance-based GSA is applied to identify input parameters with less influence on differences between simulated outputs and observations. By dropping these less influential input parameters in the calibration process, this research reduces the computational intensity of calibration. Since GSA requires many simulation runs, due to ABMs' stochasticity, we leverage the high-performance computing power provided by the advanced cyberinfrastructure. A spatially explicit ABM of influenza transmission is used as the case study to demonstrate the utility of the framework. Leveraging GSA, we were able to exclude less influential parameters in the model calibration process and demonstrate the importance of revising local settings for an epidemic pattern in an outbreak.},
-	keywords={peer}
+	url = {https://doi.org/10.1111/tgis.12837}
 }
 
-@article{MichelsSIGSPATIAL20,
+@inproceedings{MichelsSIGSPATIAL20,
+	abbr = {SIGSPATIAL},
 	author = {\textbf{Michels, Alexander} and Kang, Jeon-Young and Wang, Shaowen},
 	title = {An Exploration of the Effect of Buyer Preference and Market Composition on the Rent Gradient Using the ALMA Framework},
 	year = {2020},
 	isbn = {9781450381611},
 	publisher = {Association for Computing Machinery},
 	address = {New York, NY, USA},
-	doi = {10.1145/3423335.3428167},
-	abstract = {Urban land markets exhibit complex emergent behaviors that have yet to be fully explained by the microeconomic decision-making which constitutes the market. The Agent-based Land MArket (ALMA) framework has been introduced to simulate a bilateral agent-based land market that produces a rent gradient. In this paper, we extend the ALMA framework by introducing two new parameters, heterogeneity, and stochasticity which allow us to explore how the rent gradient is affected by buyers with diverse preferences and a range of market compositions.},
-	journal = {Proceedings of the 3rd ACM SIGSPATIAL International Workshop on GeoSpatial Simulation},
+	url = {https://doi.org/10.1145/3423335.3428167},
+	booktitle = {Proceedings of the 3rd ACM SIGSPATIAL International Workshop on GeoSpatial Simulation},
 	pages = {48–51},
 	numpages = {4},
 	keywords = {agent-based modeling, spatial simulation, land markets},
 	location = {Seattle, Washington},
-	series = {GeoSim '20},
-	keywords={peer}
+	series = {GeoSim '20}
 }
+
 
 @article{Kang2020.05.06.20093534,
-	author = {Kang, Jeon-Young and \textbf{Michels, Alexander C} and Lyu, Fangzheng and Wang, Shaohua and Agbodo, Nelson and Freeman, Vincent L and Wang, Shaowen},
+	abbr = {IJHG},
+	author = {Kang, Jeon-Young and \textbf{Michels, Alexander} and Lyu, Fangzheng and Wang, Shaohua and Agbodo, Nelson and Freeman, Vincent L and Wang, Shaowen},
 	title = {Rapidly Measuring Spatial Accessibility of COVID-19 Healthcare Resources: A Case Study of Illinois, USA},
 	year = {2020},
-	doi = {10.1186/s12942-020-00229-x},
-	abstract = {The severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), causing the coronavirus disease 2019 (COVID-19) pandemic, has infected millions of people and caused hundreds of thousands of deaths. While COVID-19 has overwhelmed healthcare resources (e.g., healthcare personnel, testing resources, hospital beds, and ventilators) in a number of countries, limited research has been conducted to understand spatial accessibility of such resources. This study fills this gap by rapidly measuring the spatial accessibility of COVID-19 healthcare resources with a particular focus on Illinois, USA. Specifically, the rapid measurement is achieved by resolving computational intensity of an enhanced two-step floating catchment area (E2SFCA) method through a parallel computing strategy based on cyberGIS (cyber geographic information science and systems). The study compared the spatial accessibility measures for COVID-19 patients to those of general population, identifying which geographic areas need additional healthcare resources to improve access. The results also help delineate the areas that may face a COVID-19-induced shortage of healthcare resources caused by COVID-19. The Chicagoland, particularly the southern Chicago, shows an additional need for resources. Our findings are relevant for policymakers and public health practitioners to allocate existing healthcare resources or distribute new resources for maximum access to health services.},
 	journal = {International Journal of Health Geographics},
-	keywords={peer}
+	url = {https://doi.org/10.1186/s12942-020-00229-x}
 }
 
-@article{KangSIGSPATIAL19,
-	author = {J.-Y. Kang and J. Aldstadt and \textbf{A. C. Michels} and R. Vandewalle and S. Wang},
+
+@inproceedings{KangSIGSPATIAL19,
+	abbr = {SIGSPATIAL},
+	author = {Kang, Jeon-Young and Aldstadt, Jared and \textbf{Michels, Alexander} and Vandewalle, Rebecca and Wang, Shaowen},
 	title = {CyberGIS-Jupyter for Spatially Explicit Agent-based Modeling: A Case Study on Influenza Transmission},
-	journal = {GeoSim '19: Proceedings of the 2nd ACM SIGSPATIAL International Workshop on GeoSpatial Simulation},
-	abstract = {Despite extensive efforts on achieving reproducible agent-based models (ABMs) to improve the capability of this widely adopted methodology, it remains challenging to reproduce and replicate pre-existing ABMs, due to a number of factors such as diverse computing resources and ABMs platforms. In this study, we propose to employ CyberGIS-Jupyter for spatially explicit ABMs. CyberGIS-Jupyter is a cyberGIS framework to achieve data-intensive, reproducible, and scalable geospatial analytics using Jupyter Notebook based on advanced cyberinfrastructure. Influenza transmission in the city of Miami, Florida, USA was used as a case study. In the model, Influenza is transmitted through the contact networks of individual human agents, which are constructed based on commuting behaviors. CyberGIS-Jupyter can support one not only to conduct collaborative and transparent modeling, but also to perform modeling simulation on advanced cyberinfrastructure resources. It may contribute to boosting the reproducibility and replicability of ABMs.},
+	booktitle = {GeoSim '19: Proceedings of the 2nd ACM SIGSPATIAL International Workshop on GeoSpatial Simulation},
 	editor = {Kavak, Hamdi and Kim, Joon-Seok and Wise, Sarah},
 	year = {2019},
 	isbn = {978-1-4503-6956-5},
@@ -52,6 +82,5 @@
 	publisher = {ACM},
 	address = {New York, NY, USA},
 	pages = {32--35},
-	doi = {10.1145/3356470.3365531},
-	keywords={peer}
+	url = {https://doi.org/10.1145/3356470.3365531}
 }
