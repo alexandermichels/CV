@@ -18,7 +18,7 @@
 	bibstyle=ieee,
 	style=authoryear,
 	sorting=ydnt,
-	maxbibnames=5,
+	maxbibnames=99,
 	refsection=section,
 	firstinits=true
 ]{biblatex}
@@ -77,7 +77,7 @@
 }
 
 \newcommand{\Edu}[3]{
-	\vspace{1pt}
+	\vspace{8pt}
 	\textbf{#1} \hfill \textbf{#2} \\
 	#3 \hfill \\
 	\vspace{2pt}
@@ -98,6 +98,7 @@
 }
 
 \newcommand{\Position}[4]{
+	\vspace{3pt}
 	\textbf{#1} \hfill \faMapPin \ #2 \\
 	#3 \hfill \textit{#4} \\
 	\vspace{3pt}
@@ -108,7 +109,7 @@
 	\textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{#2}}\\
 	\vspace{-9pt}
 	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
-	\vspace{-12pt}
+	\vspace{-6pt}
 }
 
 \newcommand{\Research}[3]{
