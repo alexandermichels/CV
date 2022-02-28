@@ -43,7 +43,7 @@
 	top=0.5in,            % <-- you want to adjust this
 	inner=0.5in,
 	outer=0.5in,
-	bottom=0.5in,
+	bottom=1in,
 	headheight=3ex,       % <-- and this
 	headsep=2ex,          % <-- and this
 	footskip=0.25in,
@@ -57,7 +57,7 @@
 \renewcommand{\headrulewidth}{0pt} % no line in header area
 \renewcommand{\footrulewidth}{0.4pt}
 \fancyfoot{} % clear all footer fields
-\fancyfoot[LE,RO]{\thepage\ of \pageref{LastPage}}           % page number in "outer" position of footer line
+\fancyfoot[L,RO]{Page\thepage\ of \pageref{LastPage}}           % page number in "outer" position of footer line
 
 \newcommand{\titem}[1]{\item[--] #1}
 
@@ -77,7 +77,7 @@
 }
 
 \newcommand{\Edu}[3]{
-	\vspace{8pt}
+	\vspace{5pt}
 	\textbf{#1} \hfill \textbf{#2} \\
 	#3 \hfill \\
 	\vspace{2pt}
@@ -98,7 +98,7 @@
 }
 
 \newcommand{\Position}[4]{
-	\vspace{3pt}
+	\vspace{5pt}
 	\textbf{#1} \hfill \faMapPin \ #2 \\
 	#3 \hfill \textit{#4} \\
 	\vspace{3pt}
@@ -131,7 +131,7 @@
 }
 
 \newenvironment{titemize}{
-	\vspace{-15pt}
+	\vspace{-10pt}
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0pt}
