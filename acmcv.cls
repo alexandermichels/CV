@@ -29,8 +29,6 @@
     uniquename=init
 ]{biblatex}
 
-\addbibresource{Bib.bib}
-
 
 \hypersetup{
 	colorlinks=true,
