@@ -1,6 +1,6 @@
 \ProvidesClass{acmcv}
 
-\LoadClass[letterpaper,11pt]{article}
+\LoadClass[letterpaper,12pt]{article}
 
 \RequirePackage{calc}
 \RequirePackage{enumitem}
@@ -10,12 +10,18 @@
 \RequirePackage{hyperref}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{lastpage}
+\usepackage{longtable}
 \RequirePackage{multicol}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 
+\renewcommand{\arraystretch}{1.5}
 \setlist[itemize]{leftmargin=*}
-\definecolor{color1}{rgb}{.6,.15,.85}
-\definecolor{color2}{rgb}{.5,.05,.7}
+% For interesting people
+% \definecolor{color1}{rgb}{.6,.15,.85}
+% \definecolor{color2}{rgb}{.5,.05,.7}
+% For boring...
+\definecolor{color1}{rgb}{0,0,0}
+\definecolor{color2}{rgb}{0,0,0}
 
 
 \usepackage[
@@ -28,7 +34,6 @@
 	giveninits=true,
     uniquename=init
 ]{biblatex}
-
 
 \hypersetup{
 	colorlinks=true,
@@ -61,6 +66,7 @@
 \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}}           % page number in "outer" position of footer line
 
 \newcommand{\titem}[1]{\item[--] #1}
+\setlist[itemize]{label=--}
 
 \newcommand{\desc}[1]{\item #1}
 
@@ -82,7 +88,8 @@
 
 \newcommand{\GithubProject}[2]{
 	\vspace{6pt}
-	\textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{#2}}\\
+	% \textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{#2}}\\
+	\textbf{#1}\hfill \href{#2}{\textbf{#2}}\\
 	\vspace{-9pt}
 	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
 	\vspace{-12pt}
@@ -95,14 +102,16 @@
 }
 
 \newcommand{\Position}[4]{
-	\textbf{#1} \hfill \faMapPin \ #2 \\
+	% \textbf{#1} \hfill \faMapPin \ #2 \\
+	\textbf{#1} \hfill \ #2 \\
 	#3 \hfill \textit{#4} \\
 	\vspace{0.25cm}
 }
 
 \newcommand{\Project}[2]{
 	\vspace{6pt}
-	\textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{#2}}\\
+	% \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{#2}}\\
+	\textbf{#1}\hfill \href{#2}{\textbf{#2}}\\
 	\vspace{-9pt}
 	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
 	\vspace{-6pt}
@@ -117,7 +126,8 @@
 \newcommand{\Talk}[4]{
     \begin{minipage}{\textwidth}
 	\hspace*{3mm}\textbf{#1} \hfill \textit{#2} \\
-	\hspace*{3mm}\textit{#3} \hfill \faMapMarker \ #4 \\
+	% \hspace*{3mm}\textit{#3} \hfill \faMapMarker \ #4 \\
+	\hspace*{3mm}\textit{#3} \hfill \ #4 \\
 	\vspace{4pt}
     \end{minipage}
 	\vspace*{-0.3cm}
@@ -147,34 +157,28 @@
 
 \newcommand{\Workshop}[4]{
     \textbf{#1} \hfill \textit{#2} \\
-    \textit{#3} \hfill \faMapMarker \ #4 \\
+    % \textit{#3} \hfill \faMapMarker \ #4 \\
+    \textit{#3} \hfill \ #4 \\
     \vspace{4pt}
 }
 
 \newenvironment{titemize}{
-	\vspace{-0.5cm}
+	\vspace{-0.25cm}
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0pt}
-		\setlength{\topsep}{0pt}
+		\setlength{\topsep}{6pt}
 	}{\end{itemize}\vspace{-0.3cm}}
 
-\newlength{\linelength}
+\newlength{\hrwidth}
+\setlength{\hrwidth}{0.5mm}
+\newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-	\vspace*{0.25cm}
-	\setlength{\linelength}{\linewidth - \widthof{#1} * \real{1.6} - 10mm}
-	\noindent\textcolor{color1}{\rule{10mm}{1mm}}
-	\hfill {\Large \textbf{#1}} \hfill
-	\noindent\textcolor{color1}{\rule{\linelength}{1mm}}
-	\vspace*{0.25cm}
-}
-
-
-\newcommand{\otherresheading}[1]
-{
-	\vspace{3pt}
-	{\Large \hspace*{0.5cm}\textbf{#1}} \\
-	\noindent\textcolor{color1}{\rule{\linewidth}{0.5mm}}
-	\vspace{-0.5cm}
+    \vspace{12pt}
+    \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
+    \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
+    \hfill \textbf{\uppercase{#1}} \hfill
+    \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
+    \vspace{6pt}
 }
