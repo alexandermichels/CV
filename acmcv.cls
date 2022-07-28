@@ -14,6 +14,9 @@
 \RequirePackage{multicol}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 
+% adjust the skip after Long tables
+\setlength{\LTpost}{6pt}
+
 \renewcommand{\arraystretch}{1.5}
 \setlist[itemize]{leftmargin=*}
 % For interesting people
@@ -23,17 +26,49 @@
 \definecolor{color1}{rgb}{0,0,0}
 \definecolor{color2}{rgb}{0,0,0}
 
-
 \usepackage[
 	backend=biber,
     defernumbers=true,
 	style=numeric,
-	sorting=ydnt,
+	sorting=ymdnt,
 	maxbibnames=99,
 	refsection=section,
 	giveninits=true,
     uniquename=init
 ]{biblatex}
+
+
+% From: https://tex.stackexchange.com/questions/140561/anti-chronological-bibliography-with-sorting-ydnt-and-usage-of-sortyear
+\DeclareSortingTemplate{ymdnt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort[direction=descending]{
+    \field[strside=left,strwidth=4]{sortyear}
+    \field[strside=left,strwidth=4]{year}
+    \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field{month}
+    \literal{9999}
+  }
+  \sort{
+    \field{sortname}
+    \field{author}
+    \field{editor}
+    \field{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{sorttitle}
+    \field{title}
+  }
+}
+
 
 \hypersetup{
 	colorlinks=true,
