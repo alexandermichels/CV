@@ -108,7 +108,7 @@
 \newcommand{\Project}[2]{
 	\vspace{3pt}
 	% \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{#2}}\\
-	\textbf{#1}\hfill \href{#2}{\textbf{#2}}\\
+	\textbf{#1}\hfill \href{https://#2}{\textbf{#2}}\\
 	% \vspace{-9pt}
 	% \noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
 	% \vspace{-0.4cm}
