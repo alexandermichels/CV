@@ -217,3 +217,13 @@
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
     \vspace{6pt}
 }
+
+\newcommand{\pubheading}[1]
+{
+    \vspace{12pt}
+    \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 8cm}
+    \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
+    \hfill \textbf{\uppercase{#1}} \textit{(underline indicates student mentee)} \hfill
+    \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
+    \vspace{6pt}
+}
