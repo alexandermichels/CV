@@ -1,6 +1,6 @@
 \ProvidesClass{acmcv}
 
-\LoadClass[letterpaper,12pt]{article}
+\LoadClass[letterpaper,11pt]{article}
 
 \RequirePackage{calc}
 \RequirePackage{enumitem}
@@ -210,20 +210,20 @@
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-    \vspace{12pt}
+    \vspace{5pt}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{6pt}
+    \vspace{5pt}
 }
 
 \newcommand{\pubheading}[2]
 {
-    \vspace{12pt}
+    \vspace{5pt}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 11cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \textit{(\href{#2}{Google Scholar}, underline indicates student mentee)} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{6pt}
+    \vspace{5pt}
 }
