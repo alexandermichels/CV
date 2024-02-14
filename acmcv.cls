@@ -34,8 +34,18 @@
 	maxbibnames=99,
 	refsection=section,
 	giveninits=true,
-    uniquename=init
+    uniquename=init,
+    isbn=false,
+    url=false,
+    eprint=false
 ]{biblatex}
+
+
+\renewbibmacro{in:}{}  % get rid of "in:" in bibliography
+\AtEveryBibitem{\clearfield{pages}} % remove pages
+
+\setlength\bibitemsep{0pt}
+\AtBeginBibliography{\vspace*{-0.3cm}}
 
 
 % From: https://tex.stackexchange.com/questions/140561/anti-chronological-bibliography-with-sorting-ydnt-and-usage-of-sortyear
@@ -210,12 +220,12 @@
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-    \vspace{5pt}
+    \vspace{-0.25cm}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{5pt}
+    \vspace{-0.25cm}
 }
 
 \newcommand{\pubheading}[2]
