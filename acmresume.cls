@@ -148,7 +148,7 @@
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-	\vspace{3pt}
+	\vspace{9pt}
 	\setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.3} - 1.5cm}
 	\noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
 	\hfill \textbf{\uppercase{#1}} \hfill
