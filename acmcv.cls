@@ -40,13 +40,42 @@
     eprint=false
 ]{biblatex}
 
-
 \renewbibmacro{in:}{}  % get rid of "in:" in bibliography
 \AtEveryBibitem{\clearfield{pages}} % remove pages
 
 \setlength\bibitemsep{0pt}
 \AtBeginBibliography{\vspace*{-0.3cm}}
 
+% % https://tex.stackexchange.com/questions/21401/biblatex-reverse-numbering-i-e-count-down
+% % Count total number of entries in each refsection
+% \AtDataInput{%
+%   \csnumgdef{entrycount:\therefsection}{%
+%     \csuse{entrycount:\therefsection}+1}}
+
+% % Print the labelnumber as the total number of entries in the
+% % current refsection, minus the actual labelnumber, plus one
+% \DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}    
+% \newrobustcmd*{\mkbibdesc}[1]{%
+%   \number\numexpr\csuse{entrycount:\therefsection}+1-#1\relax}
+
+\makeatletter
+\define@key{blx@bib1}{keyword}{\xdef\mykeyword{#1}}
+\makeatother
+
+\newcommand{\stepKeywordCount}[1]{\csnumgdef{entrycount:#1}{\csuse{entrycount:#1}+1}}
+
+\AtDataInput{%
+  \iffieldundef{labelprefix}{%
+    \begingroup%
+      \edef\mytemp{\strfield{keywords}}
+      \expandafter\forcsvlist\expandafter{\expandafter\stepKeywordCount\expandafter}\expandafter{\mytemp}%
+    \endgroup%
+  }{}%
+}%
+
+\DeclareFieldFormat{labelnumber}{\mkbibdesc{#1}}
+\newrobustcmd*{\mkbibdesc}[1]{\number\numexpr\csuse{entrycount:\mykeyword}+1-#1\relax}
+\newcommand{\mykeyword}{}
 
 % From: https://tex.stackexchange.com/questions/140561/anti-chronological-bibliography-with-sorting-ydnt-and-usage-of-sortyear
 \DeclareSortingTemplate{ymdnt}{

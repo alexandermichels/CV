@@ -46,11 +46,16 @@
 % \resheading{\faNewspaper~Publications}
 \pubheading{Publications}{https://scholar.google.com/citations?user=EbmZrwYAAAAJ}
 		\vspace{-.5cm}
-		\nocite{*}
-		\printbibliography[title={\normalsize \uppercase{Journal Articles}},type=article]
+        \newrefcontext[labelprefix=J]
+        \nocite{*}
+		\printbibliography[title={\normalsize \uppercase{Journal Articles}},type=article, keyword=journalarticle]
 		\vspace{-.8cm}
+        \newrefcontext[labelprefix=C]
+        % \nocite{*}
 		\printbibliography[title={\normalsize \uppercase{Peer-Reviewed Conference Papers}},type=inproceedings, keyword=confpaper]
 		\vspace{-.8cm}
+        \newrefcontext[labelprefix=A]
+        % \nocite{*}
         \printbibliography[title={\normalsize \uppercase{Conference Abstracts}}, keyword=extabs]
 		%\vspace{-.75cm}
 		%\printbibliography[title={Submitted/Under Review},type=unpublished]
