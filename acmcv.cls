@@ -2,6 +2,8 @@
 
 \LoadClass[letterpaper,11pt]{article}
 
+\renewcommand{\baselinestretch}{1.1}
+
 \RequirePackage{calc}
 \RequirePackage{enumitem}
 \RequirePackage{fancyhdr}
@@ -249,7 +251,7 @@
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-    \vspace{-0.25cm}
+    % \vspace{-0.25cm}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
@@ -260,9 +262,9 @@
 \newcommand{\pubheading}[2]
 {
     \vspace{5pt}
-    \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 11cm}
+    \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 8cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
-    \hfill \textbf{\uppercase{#1}} \textit{(\href{#2}{Google Scholar}, underline indicates student mentee)} \hfill
+    \hfill \textbf{\href{#2}{\uppercase{#1}}} \textit{(underline indicates student mentee)} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
     \vspace{5pt}
 }
