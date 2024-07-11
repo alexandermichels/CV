@@ -10,6 +10,7 @@
 \RequirePackage{hyperref}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{lastpage}
+\usepackage{longtable}
 \RequirePackage{multicol}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 
@@ -76,10 +77,10 @@
 }
 
 \newcommand{\Edu}[3]{
-	\vspace{2pt}
+	% \vspace{2pt}
 	\textbf{#1} \hfill \textbf{#2} \\
 	#3 \hfill \\
-	\vspace{4pt}
+	% \vspace{4pt}
 }
 
 \newcommand{\GithubProject}[2]{
@@ -148,10 +149,12 @@
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-	\vspace{9pt}
+	% \vspace{9pt}
+    % \vspace*{-0.25cm}
 	\setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.3} - 1.5cm}
 	\noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
 	\hfill \textbf{\uppercase{#1}} \hfill
 	\noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-	\vspace{3pt}
+    % \vspace*{-0.25cm}
+	% \vspace{3pt}
 }
