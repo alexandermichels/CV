@@ -14,6 +14,7 @@
 \RequirePackage{lastpage}
 \usepackage{longtable}
 \RequirePackage{multicol}
+\RequirePackage{needspace}
 \RequirePackage[usenames,dvipsnames]{xcolor}
 
 % adjust the skip after Long tables
@@ -252,12 +253,22 @@
 \newcommand{\resheading}[1]
 {
     % \vspace{-0.25cm}
+    \needspace{.1\textheight}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
     \vspace{-0.25cm}
 }
+
+\newcommand{\subheading}[1]
+{
+    % \vspace{-0.25cm}
+    \needspace{.1\textheight}
+    \textbf{#1}
+    \vspace{-0.3cm}
+}
+
 
 \newcommand{\pubheading}[2]
 {
