@@ -123,7 +123,7 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Adjust margins to 0.5in on all sides
+% Adjust margins
 \usepackage{geometry}
 \geometry{
 	top=1in,            % <-- you want to adjust this
@@ -264,7 +264,7 @@
 \newcommand{\subheading}[1]
 {
     % \vspace{-0.25cm}
-    \needspace{.1\textheight}
+    \needspace{.04\textheight}
     \textbf{#1}
     \vspace{-0.3cm}
 }
