@@ -137,6 +137,7 @@
 
 \pagestyle{fancy}
 \fancyhead{} % clear all header fields
+% \fancyhead[L]{\textbf{Michels, Alexander - CV}}
 \renewcommand{\headrulewidth}{0pt} % no line in header area
 \renewcommand{\footrulewidth}{0.4pt}
 \fancyfoot{} % clear all footer fields
@@ -147,97 +148,6 @@
 
 \newcommand{\desc}[1]{\item #1}
 
-\newcommand{\Award}[4]{
-    \begin{minipage}{\textwidth}
-	\textbf{#1} \hfill #2 \\
-	\textit{``#3''} \hfill #4 \\
-	\vspace{4pt}
-    \end{minipage}
-    \vspace{-0.3cm}
-}
-
-\newcommand{\Edu}[3]{
-	\vspace{5pt}
-	\textbf{#1} \hfill #2 \\
-	#3 \hfill \\
-	\vspace{2pt}
-}
-
-\newcommand{\GithubProject}[2]{
-	\vspace{6pt}
-	% \textbf{{\large #1}}\hfill \href{#2}{\faGithub~\textbf{#2}}\\
-	\textbf{#1}\hfill \href{#2}{\textbf{#2}}\\
-	\vspace{-9pt}
-	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
-	\vspace{-12pt}
-}
-
-\newcommand{\Grant}[4]{
-	\textbf{#1}\hfill \textit{#2} \\
-	\textit{#3} \hfill #4\\
-	\vspace{4pt}
-}
-
-\newcommand{\Position}[4]{
-	% \textbf{#1} \hfill \faMapPin \ #2 \\
-	\textbf{#1} \hfill \ #2 \\
-	#3 \hfill \textit{#4} \\
-	\vspace{0.25cm}
-}
-
-\newcommand{\Project}[2]{
-	\vspace{6pt}
-	% \textbf{{\large #1}}\hfill \href{#2}{\faLaptop~\textbf{#2}}\\
-	\textbf{#1}\hfill \href{#2}{\textbf{#2}}\\
-	\vspace{-9pt}
-	\noindent\textcolor{color1}{\rule{\textwidth}{0.2mm}}
-	\vspace{-6pt}
-}
-
-\newcommand{\Research}[3]{
-	\textbf{#1}\\
-	\textit{#2} \hfill \textit{#3} \\
-	\vspace{4pt}
-}
-
-\newcommand{\Talk}[4]{
-    \begin{minipage}{\textwidth}
-	\hspace*{3mm}\textbf{#1} \hfill \textit{#2} \\
-	% \hspace*{3mm}\textit{#3} \hfill \faMapMarker \ #4 \\
-	\hspace*{3mm}\textit{#3} \hfill \ #4 \\
-	\vspace{4pt}
-    \end{minipage}
-	\vspace*{-0.3cm}
-}
-
-\newcommand{\OtherTalk}[4]{
-    \begin{minipage}{0.15\textwidth}
-        {#2} \\
-        \vspace*{\fill}
-    \end{minipage}
-    \begin{minipage}{0.8\textwidth}
-        ``{#1}.''\textit{#3}, {#4}.
-    \end{minipage}
-    \vspace{0.25cm}
-}
-
-\newcommand{\MyTalk}[2]{
-    \begin{minipage}{0.15\textwidth}
-        {#1} \\
-        \vspace*{\fill}
-    \end{minipage}
-    \begin{minipage}{0.8\textwidth}
-        {#2}
-    \end{minipage} \\
-    \vspace{0.25cm}
-}
-
-\newcommand{\Workshop}[4]{
-    \textbf{#1} \hfill \textit{#2} \\
-    % \textit{#3} \hfill \faMapMarker \ #4 \\
-    \textit{#3} \hfill \ #4 \\
-    \vspace{4pt}
-}
 
 \newenvironment{titemize}{
 	\vspace{-0.25cm}
