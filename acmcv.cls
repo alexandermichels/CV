@@ -157,26 +157,36 @@
 		\setlength{\topsep}{6pt}
 	}{\end{itemize}\vspace{-0.3cm}}
 
+\newenvironment{mytable}{
+	\vspace{-0.25cm}
+	\begin{longtable}{p{0.1\linewidth} p{0.9\linewidth}}
+	}{\end{longtable}}
+
+
 \newlength{\hrwidth}
 \setlength{\hrwidth}{0.5mm}
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-    % \vspace{-0.25cm}
-    \needspace{.1\textheight}
+    \vspace{0.5cm}
+    % https://tex.stackexchange.com/questions/264337/using-needspace-within-paragraph-provides-too-much-space
+    \vspace{\dimexpr-\baselineskip-\parskip\relax}
+    \Needspace{.1\textheight}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{-0.25cm}
+    \vspace{0.25cm}
+
 }
 
 \newcommand{\subheading}[1]
 {
-    % \vspace{-0.25cm}
-    \needspace{.04\textheight}
+    \vspace{0.25cm}
+    \vspace{\dimexpr-\baselineskip-\parskip\relax}
+    \Needspace{.1\textheight}
     \textbf{#1}
-    \vspace{-0.3cm}
+    % \vspace{-0.3cm}
 }
 
 
