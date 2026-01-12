@@ -168,7 +168,7 @@
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-    \vspace{0.5cm}
+    \vspace{0.25cm}
     % https://tex.stackexchange.com/questions/264337/using-needspace-within-paragraph-provides-too-much-space
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
     \Needspace{.1\textheight}
@@ -176,7 +176,7 @@
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{0.25cm}
+    \vspace{0.5cm}
 
 }
 
@@ -186,7 +186,7 @@
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
     \Needspace{.1\textheight}
     \textbf{#1}
-    % \vspace{-0.3cm}
+    \vspace{-0.1cm}
 }
 
 
