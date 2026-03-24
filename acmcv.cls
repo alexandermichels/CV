@@ -150,12 +150,12 @@
 
 
 \newenvironment{titemize}{
-	\vspace{-0.25cm}
+	\vspace{-0.1cm}
 	\begin{itemize}
 		\setlength{\itemsep}{0pt}
 		\setlength{\parskip}{0pt}
 		\setlength{\topsep}{6pt}
-	}{\end{itemize}\vspace{-0.3cm}}
+	}{\end{itemize}\vspace{0.1cm}}
 
 \newenvironment{mytable}{
 	\vspace{-0.25cm}
@@ -171,7 +171,7 @@
     \vspace{0.25cm}
     % https://tex.stackexchange.com/questions/264337/using-needspace-within-paragraph-provides-too-much-space
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
-    \Needspace{.1\textheight}
+    \Needspace{.15\textheight}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
@@ -182,11 +182,11 @@
 
 \newcommand{\subheading}[1]
 {
-    \vspace{0.25cm}
+    \vspace{0.5cm}
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
     \Needspace{.1\textheight}
     \textbf{#1}
-    \vspace{-0.1cm}
+    \vspace{-0.2cm}
 }
 
 
