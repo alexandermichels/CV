@@ -158,9 +158,10 @@
 	}{\end{itemize}\vspace{0.1cm}}
 
 \newenvironment{mytable}{
-	\vspace{-0.25cm}
-	\begin{longtable}{p{0.1\linewidth} p{0.9\linewidth}}
+	\vspace{-0.1cm}
+	\begin{longtable}{p{0.16\linewidth} p{0.84\linewidth}}
 	}{\end{longtable}}
+	\vspace{-0.25cm}
 
 
 \newlength{\hrwidth}
@@ -176,26 +177,26 @@
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\uppercase{#1}} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{0.5cm}
+    \vspace{-0.25cm}
 
 }
 
 \newcommand{\subheading}[1]
 {
-    \vspace{0.5cm}
+    \vspace*{0.5cm}
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
     \Needspace{.1\textheight}
     \textbf{#1}
-    \vspace{-0.2cm}
+    \vspace*{-0.2cm}
 }
 
 
 \newcommand{\pubheading}[2]
 {
-    \vspace{5pt}
+    \vspace{0.25cm}
     \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 8cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\href{#2}{\uppercase{#1}}} \textit{(underline indicates student mentee)} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{5pt}
+    \vspace{-0.25cm}
 }
