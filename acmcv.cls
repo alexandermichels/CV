@@ -4,6 +4,7 @@
 
 \renewcommand{\baselinestretch}{1.1}
 
+\RequirePackage{array}
 \RequirePackage{calc}
 \RequirePackage{enumitem}
 \RequirePackage{fancyhdr}
@@ -18,9 +19,9 @@
 \RequirePackage[usenames,dvipsnames]{xcolor}
 
 % adjust the skip after Long tables
-\setlength{\LTpost}{6pt}
+\setlength{\LTpost}{7pt}
 
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.25}
 \setlist[itemize]{leftmargin=*}
 % For interesting people
 % \definecolor{color1}{rgb}{.6,.15,.85}
@@ -157,27 +158,27 @@
 		\setlength{\topsep}{6pt}
 	}{\end{itemize}\vspace{0.1cm}}
 
-\newenvironment{mytable}{
-	\vspace{-0.1cm}
-	\begin{longtable}{p{0.16\linewidth} p{0.84\linewidth}}
+\newcolumntype{D}{>{\bfseries}p{2.1cm}}
+\newenvironment{mytable}{%
+	\begin{longtable}{D p{\dimexpr\linewidth-2.1cm\relax}}
 	}{\end{longtable}}
-	\vspace{-0.25cm}
-
 
 \newlength{\hrwidth}
 \setlength{\hrwidth}{0.5mm}
+\setlength{\multicolsep}{10pt plus 2pt}
+\setlength{\premulticols}{2\baselineskip}
 \newlength{\hrlength}
 \newcommand{\resheading}[1]
 {
-    \vspace{0.25cm}
+    \vspace{0.4cm}
     % https://tex.stackexchange.com/questions/264337/using-needspace-within-paragraph-provides-too-much-space
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
     \Needspace{.15\textheight}
-    \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 1.5cm}
+    \setlength{\hrlength}{\linewidth - \widthof{#1} * \real{1.2} - 1.5cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
-    \hfill \textbf{\uppercase{#1}} \hfill
+    \hfill \textbf{#1} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{-0.25cm}
+    \vspace{-0.05cm}
 
 }
 
@@ -193,10 +194,10 @@
 
 \newcommand{\pubheading}[2]
 {
-    \vspace{0.25cm}
-    \setlength{\hrlength}{\linewidth - \widthof{\uppercase{#1}} * \real{1.2} - 8cm}
+    \vspace{0.4cm}
+    \setlength{\hrlength}{\linewidth - \widthof{#1} * \real{1.2} - 8cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
-    \hfill \textbf{\href{#2}{\uppercase{#1}}} \textit{(underline indicates student mentee)} \hfill
+    \hfill \textbf{\href{#2}{#1}} \textit{(underline indicates student mentee)} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{-0.25cm}
+    \vspace{-0.05cm}
 }
