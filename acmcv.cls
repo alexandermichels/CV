@@ -178,7 +178,7 @@
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{#1} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{-0.05cm}
+    \vspace{-0.3cm}
 
 }
 
@@ -188,16 +188,16 @@
     \vspace{\dimexpr-\baselineskip-\parskip\relax}
     \Needspace{.1\textheight}
     \textbf{#1}
-    \vspace*{-0.2cm}
+    \vspace*{-0.4cm}
 }
 
 
 \newcommand{\pubheading}[2]
 {
-    \vspace{0.4cm}
+    \vspace{-0.4cm}
     \setlength{\hrlength}{\linewidth - \widthof{#1} * \real{1.2} - 8cm}
     \noindent\textcolor{color1}{\rule{1cm}{\hrwidth}}
     \hfill \textbf{\href{#2}{#1}} \textit{(underline indicates student mentee)} \hfill
     \noindent\textcolor{color1}{\rule{\hrlength}{\hrwidth}}
-    \vspace{-0.05cm}
+    \vspace{-0.5cm}
 }
